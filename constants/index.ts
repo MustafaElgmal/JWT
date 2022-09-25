@@ -1,4 +1,5 @@
 export const Base_Url = "http://localhost:3000";
+
 export const stories = [
   {
     id: 1,
@@ -21,3 +22,9 @@ export const stories = [
     imageUrl:"https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
   },
 ];
+
+
+export function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ');
+}
+
