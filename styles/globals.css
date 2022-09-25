@@ -24,6 +24,12 @@ a {
 * {
   box-sizing: border-box;
 }
+.div1{
+  background-color: #fe760c;
+}
+.div2{
+  background-color:#0a47ec ;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
