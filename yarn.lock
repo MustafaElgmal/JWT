@@ -32,6 +32,16 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
+"@headlessui/react@^1.7.2":
+  "integrity" "sha512-snLv2lxwsf2HNTOBNgHYdvoYZ3ChJE8QszPi1d/hl9js8KrFrUulTaQBfSyPbJP5BybVreWh9DxCgz9S0Z6hKQ=="
+  "resolved" "https://registry.npmjs.org/@headlessui/react/-/react-1.7.2.tgz"
+  "version" "1.7.2"
+
+"@heroicons/react@^2.0.11":
+  "integrity" "sha512-bASjOgSSaYj8HqXWsOqaBiB6ZLalE/g90WYGgZ5lPm4KCCG7wPXntY4kzHf5NrLh6UBAcnPwvbiw1Ne9GYfJtw=="
+  "resolved" "https://registry.npmjs.org/@heroicons/react/-/react-2.0.11.tgz"
+  "version" "2.0.11"
+
 "@humanwhocodes/config-array@^0.10.5":
   "integrity" "sha512-XVVDtp+dVvRxMoxSiSfasYaG02VEe1qH5cKgMQJWhol6HwzbcqoCMJi8dAGoYAO57jhUyhI6cWuRiTcRaDaYug=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.10.5.tgz"
@@ -156,6 +166,18 @@
   "version" "0.4.11"
   dependencies:
     "tslib" "^2.4.0"
+
+"@tailwindcss/aspect-ratio@^0.4.2":
+  "integrity" "sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ=="
+  "resolved" "https://registry.npmjs.org/@tailwindcss/aspect-ratio/-/aspect-ratio-0.4.2.tgz"
+  "version" "0.4.2"
+
+"@tailwindcss/forms@^0.5.3":
+  "integrity" "sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q=="
+  "resolved" "https://registry.npmjs.org/@tailwindcss/forms/-/forms-0.5.3.tgz"
+  "version" "0.5.3"
+  dependencies:
+    "mini-svg-data-uri" "^1.2.3"
 
 "@types/json5@^0.0.29":
   "integrity" "sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ=="
@@ -1466,6 +1488,11 @@
   dependencies:
     "mime-db" "1.52.0"
 
+"mini-svg-data-uri@^1.2.3":
+  "integrity" "sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg=="
+  "resolved" "https://registry.npmjs.org/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz"
+  "version" "1.4.4"
+
 "minimatch@^3.0.4", "minimatch@^3.1.1", "minimatch@^3.1.2":
   "integrity" "sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw=="
   "resolved" "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz"
@@ -1768,6 +1795,7 @@
   dependencies:
     "@prisma/engines" "4.3.1"
 
+
 "prop-types-extra@^1.1.0":
   "integrity" "sha512-59+AHNnHYCdiC+vMwY52WmvP5dM3QLeoumYuEyceQDi9aEhtwN9zIQ2ZNo25sMyXnbh32h+P1ezDsUpUH3JAew=="
   "resolved" "https://registry.npmjs.org/prop-types-extra/-/prop-types-extra-1.1.1.tgz"
@@ -1777,6 +1805,7 @@
     "warning" "^4.0.0"
 
 "prop-types@^15.6.2", "prop-types@^15.8.1":
+
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -1805,6 +1834,7 @@
   "resolved" "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
   "version" "5.1.1"
 
+
 "react-bootstrap@^2.5.0":
   "integrity" "sha512-j/aLR+okzbYk61TM3eDOU1NqOqnUdwyVrF+ojoCRUxPdzc2R0xXvqyRsjSoyRoCo7n82Fs/LWjPCin/QJNdwvA=="
   "resolved" "https://registry.npmjs.org/react-bootstrap/-/react-bootstrap-2.5.0.tgz"
@@ -1824,6 +1854,7 @@
     "warning" "^4.0.3"
 
 "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>=16.14.0", "react-dom@>=16.6.0", "react-dom@18.2.0":
+
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -1836,7 +1867,13 @@
   "resolved" "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-2.0.4.tgz"
   "version" "2.0.4"
 
-"react-is@^16.13.1", "react-is@^16.3.2", "react-is@^16.7.0":
+
+"react-icons@^4.4.0":
+  "integrity" "sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg=="
+  "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.4.0.tgz"
+  "version" "4.4.0"
+
+
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
@@ -1857,6 +1894,7 @@
     "prop-types" "^15.6.2"
 
 "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0-rc.1 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=0.14.0", "react@>=15.0.0", "react@>=16.14.0", "react@>=16.6.0", "react@>=16.8.0", "react@18.2.0":
+
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
@@ -2063,7 +2101,7 @@
   "resolved" "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   "version" "1.0.0"
 
-"tailwindcss@^3.1.8":
+"tailwindcss@^3.1.8", "tailwindcss@>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1", "tailwindcss@>=3.0.0 || >= 3.0.0-alpha.1":
   "integrity" "sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g=="
   "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.1.8.tgz"
   "version" "3.1.8"
