@@ -6,9 +6,9 @@ export default function Story({ stories }: AppProps) {
       {stories?.map((story) => (
         <div key={story.id}>
           {story.id % 2 == 0 ? (
-            <div className="bg-gradient-to-r from-teal-500 to-cyan-600 pb-16 lg:relative lg:z-10 lg:pb-0">
+            <div className="div1 pb-16 lg:relative  lg:pb-0">
               <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
-                <div className="relative lg:-my-8">
+                <div className="relative z-10 lg:-my-8">
                   <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
                     <div className="aspect-w-10 aspect-h-6 overflow-hidden rounded-xl shadow-4xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
                       <img
@@ -33,7 +33,7 @@ export default function Story({ stories }: AppProps) {
               </div>
             </div>
           ) : (
-            <div className="bg-gradient-to-r from-teal-500 to-cyan-600 pb-16 lg:relative lg:z-10 lg:pb-0">
+            <div className="div2 pb-16 lg:relative  lg:pb-0">
               <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
                 <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
                   <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
@@ -46,7 +46,7 @@ export default function Story({ stories }: AppProps) {
                     </div>
                   </div>
                 </div>
-                <div className="relative lg:-my-8">
+                <div className="relative z-10 lg:-my-8">
                   <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
                     <div className="aspect-w-10 aspect-h-6 overflow-hidden rounded-xl shadow-4xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
                       <img
