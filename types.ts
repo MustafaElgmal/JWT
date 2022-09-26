@@ -1,7 +1,10 @@
+
 export interface AppProps {
     stories?: story[]
     children?: JSX.Element
     broadcasts?: Broadcasts[]
+    story?:story
+
 }
 
 export interface story {

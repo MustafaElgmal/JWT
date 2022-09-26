@@ -6,14 +6,17 @@ import Story from '../components/story';
 import { stories } from '../constants';
 import { broadcasts } from '../constants';
 
+
 const Home: NextPage = () => {
   return (
     <div>
       <Slider />
       <Story stories={stories} />
+
       <BroadcastCards broadcasts={broadcasts} />
     </div>
   );
 };
+
 
 export default Home;

@@ -17,15 +17,21 @@
     "bootstrap": "^5.2.1",
     "formik": "^2.2.9",
     "next": "12.3.1",
+    "pure-react-carousel": "^1.29.0",
     "react": "18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-social-icons": "^5.14.0",
+    "swiper": "^8.4.2",
     "yup": "^0.32.11"
   },
   "devDependencies": {
+
     "@tailwindcss/aspect-ratio": "^0.4.2",
+
+    "@svgr/webpack": "^6.3.1",
+
     "@types/node": "18.7.20",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",

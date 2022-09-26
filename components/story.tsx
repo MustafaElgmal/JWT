@@ -1,67 +1,104 @@
+import Link from "next/link";
+import React from "react";
 import { AppProps } from "../types";
 
-export default function Story({ stories }: AppProps) {
+const Story = ({ stories }: AppProps) => {
   return (
-    <div className="pt-10">
-      {stories?.map((story) => (
-        <div key={story.id}>
-          {story.id % 2 == 0 ? (
-            <div className="div1 pb-16 lg:relative  lg:pb-0">
-              <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
-                <div className="relative z-10 lg:-my-8">
-                  <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
-                    <div className="aspect-w-10 aspect-h-6 overflow-hidden rounded-xl shadow-4xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-                      <img
-                        className="object-cover lg:h-full lg:w-full"
-                        src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
-                  <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
-                    <div>
-                      <p className="mt-6 text-2xl text-white">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed urna nulla vitae laoreet augue. Amet feugiat est
-                        integer dolor auctor adipiscing nunc urna, sit.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="div2 pb-16 lg:relative  lg:pb-0">
-              <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
-                <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
-                  <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
-                    <div>
-                      <p className="mt-6 text-2xl text-white">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed urna nulla vitae laoreet augue. Amet feugiat est
-                        integer dolor auctor adipiscing nunc urna, sit.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative z-10 lg:-my-8">
-                  <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
-                    <div className="aspect-w-10 aspect-h-6 overflow-hidden rounded-xl shadow-4xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-                      <img
-                        className="object-cover lg:h-full lg:w-full"
-                        src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+    <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+      <div className="flex lg:flex-row flex-col justify-between gap-8 pt-12">
+        <div className="w-full lg:w-5/12 flex flex-col justify-center">
+          <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">
+            Our Story
+          </h1>
+          <p className="font-normal text-base leading-6 text-gray-600 ">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum.In the first place we have granted to God, and
+            by this our present charter confirmed for us and our heirs forever
+            that the English Church shall be free, and shall have her rights
+            entire, and her liberties inviolate; and we will that it be thus
+            observed; which is apparent from
+          </p>
         </div>
-      ))}
+        <div className="w-full lg:w-8/12 lg:pt-8">
+          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
+            <div className="p-4 pb-6 flex justify-center flex-col items-center">
+              <img
+                className="md:block hidden"
+                src="https://i.ibb.co/FYTKDG6/Rectangle-118-2.png"
+                alt="Alexa featured Img"
+              />
+              <img
+                className="md:hidden block"
+                src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
+                alt="Alexa featured Img"
+              />
+              <p className="font-medium text-xl leading-5 text-gray-800 mt-4">
+                Alexa
+              </p>
+              <Link href={`/stories/2`}>
+                <a className="font-medium hover:text-indigo-500">Read my story</a>
+              </Link>
+            </div>
+            <div className="p-4 pb-6 flex justify-center flex-col items-center">
+              <img
+                className="md:block hidden"
+                src="https://i.ibb.co/fGmxhVy/Rectangle-119.png"
+                alt="Olivia featured Img"
+              />
+              <img
+                className="md:hidden block"
+                src="https://i.ibb.co/NrWKJ1M/Rectangle-119.png"
+                alt="Olivia featured Img"
+              />
+              <p className="font-medium text-xl leading-5 text-gray-800 mt-4">
+                Olivia
+              </p>
+              <Link href={`/stories/3`}>
+                <a className="font-medium hover:text-indigo-500">Read my story</a>
+              </Link>
+            </div>
+            <div className="p-4 pb-6 flex justify-center flex-col items-center">
+              <img
+                className="md:block hidden"
+                src="https://i.ibb.co/Pc6XVVC/Rectangle-120.png"
+                alt="Liam featued Img"
+              />
+              <img
+                className="md:hidden block"
+                src="https://i.ibb.co/C5MMBcs/Rectangle-120.png"
+                alt="Liam featued Img"
+              />
+              <p className="font-medium text-xl leading-5 text-gray-800 mt-4">
+                Liam
+              </p>
+              <Link href={`/stories/4`}>
+                <a className="font-medium hover:text-indigo-500">Read my story</a>
+              </Link>
+            </div>
+            <div className="p-4 pb-6 flex justify-center flex-col items-center">
+              <img
+                className="md:block hidden"
+                src="https://i.ibb.co/7nSJPXQ/Rectangle-121.png"
+                alt="Elijah featured img"
+              />
+              <img
+                className="md:hidden block"
+                src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
+                alt="Elijah featured img"
+              />
+              <p className="font-medium text-xl leading-5 text-gray-800 mt-4">
+                Elijah
+              </p>
+              <Link href={`/stories/5`}>
+                <a className="font-medium hover:text-indigo-500">Read my story</a>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Story;
