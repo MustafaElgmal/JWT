@@ -1,6 +1,7 @@
 export interface AppProps{
     stories?:story[]
     children?:JSX.Element
+    story?:story
 }
 
 export interface story{

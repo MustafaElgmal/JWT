@@ -30,6 +30,13 @@ a {
 .div2{
   background-color:#0a47ec ;
 }
+ .item{
+  color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
