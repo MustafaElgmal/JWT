@@ -7,7 +7,7 @@ import { SocialIcon } from "react-social-icons";
 const Footer = () => {
   return (
     <>
-      <div className="bg-blue-500  w-full grid grid-cols-2 justify-around items-start pt-7 px-20  bottom-0 ">
+      <div className="div2 text-white w-full grid grid-cols-2 justify-around items-start pt-7 px-20  bottom-0 ">
         <div className="p-5">
           <ul>
             {/* <p className="text-white-800 font-bold text-2xl pb-4">Support</p> */}
