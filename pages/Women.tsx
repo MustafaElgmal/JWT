@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 function Women() {
     return (
-        <div className="bg-gray-50  flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center ">
             <div className="lg:px-16 lg:flex-wrap flex-nowrap  items-start none lg:flex">
                 <div className="mt-24 hidden xl:block">
                     <div className="hidden items-end  xl:flex">
@@ -48,7 +49,7 @@ function Women() {
                     IN Touching With Our Wounder Woman
                 </h1>
                 <h2 role="contentinfo" tabIndex={0} className="text-base leading-normal text-center text-gray-600 mt-5">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text Lorem Ipsum is simply dummy text of the printing
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text Lorem Ipsum is simply dummy text of the printing
                 </h2>
             </div>
         </div>

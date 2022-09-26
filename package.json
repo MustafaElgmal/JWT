@@ -22,19 +22,18 @@
     "react-bootstrap": "^2.5.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-scroll": "^1.8.7",
     "react-social-icons": "^5.14.0",
     "swiper": "^8.4.2",
     "yup": "^0.32.11"
   },
   "devDependencies": {
-
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-
     "@svgr/webpack": "^6.3.1",
-
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/node": "18.7.20",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
+    "@types/react-scroll": "^1.8.4",
     "autoprefixer": "^10.4.12",
     "eslint": "8.24.0",
     "eslint-config-next": "12.3.1",
