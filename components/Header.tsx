@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Header = () => {
   const [menu, setMenu] = useState([
-    { id: 'dashboard', name: 'dashboard', active: false },
+    { id: 'dashboard', name: 'dashboard', active: true },
     { id: 'team', name: 'team', active: false },
     { id: 'project', name: 'project', active: false },
     { id: 'calender', name: 'calender', active: false },
@@ -22,7 +22,8 @@ const Header = () => {
   };
 
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <header>
+      <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -99,6 +100,8 @@ const Header = () => {
         </>
       )}
     </Disclosure>
+    </header>
+    
   );
 };
 
