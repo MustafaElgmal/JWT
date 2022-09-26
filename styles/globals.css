@@ -65,3 +65,10 @@ a {
 .slider-height {
   height: 500px;
 }
+.footerlink{
+  color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    cursor: pointer;
+}
