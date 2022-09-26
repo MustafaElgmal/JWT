@@ -2,6 +2,7 @@
 import type { NextPage } from 'next'
 import Slider from '../components/slider';
 import Story from '../components/story';
+import WomenQuotes from '../components/WomenQuotes';
 import { stories } from '../constants';
 
 
@@ -11,7 +12,6 @@ const Home: NextPage = () => {
     <div>
       <Slider />
       <Story stories={stories} />
-   
     </div>
 
   )
