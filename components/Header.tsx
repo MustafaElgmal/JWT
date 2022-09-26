@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { Fragment, useState } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import React, { useState } from "react";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon,  XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { classNames } from "../constants";
+import * as Scroll from "react-scroll";
 
 const Header = () => {
   const [menu, setMenu] = useState([
@@ -26,40 +26,45 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header className="fixed-top">
       <Disclosure as="nav" className="bg-white shadow">
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between h-16">
                 <div className="flex w-full justify-between">
-                  <div className="flex flex-shrink-0 items-center">
-                    {/* <img
-                    className="block h-8 w-auto lg:hnameden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
-                  />
-                  <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
-                  /> */}
-                    <h1>Logo</h1>
+                  <div
+                    className="flex flex-shrink-0 items-center "
+                    style={{ cursor: "pointer" }}
+                  >
+                    <Link href="/">
+                      <img
+                        className="block h-8 w-auto lg:hnameden"
+                        src="https://review2020.s3.us-east-1.amazonaws.com/1664216788841Wunderman_Thompson_2018.png"
+                        alt="Your Company"
+                      />
+                    </Link>
                   </div>
+
                   <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                     {menu.map((item) => (
-                      <Link key={item.name} href="/">
-                        <a
-                          className={`${
-                            !item.active
-                              ? "item inline-flex items-center border-b-4 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                              : "item inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-                          }`}
-                          onClick={() => selectHandler(item.name)}
-                        >
-                          {item.name}
-                        </a>
-                      </Link>
+                      <Scroll.Link
+                        activeClass="active"
+                        href="/"
+                        to={item.name}
+                        spy={true}
+                        offset={-70}
+                        duration={500}
+                        key={item.name}
+                        className={`${
+                          !item.active
+                            ? "item inline-flex items-center border-b-4 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                            : "item inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                        }`}
+                        onClick={() => selectHandler(item.name)}
+                      >
+                        {item.name}
+                      </Scroll.Link>
                     ))}
                   </div>
                 </div>
@@ -83,16 +88,25 @@ const Header = () => {
                 {menu.map((item) => (
                   <Disclosure.Button
                     key={item.name}
-                    href="/"
-                    as="link"
-                    className={`${
-                      item.active
-                        ? "block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
-                        : "block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-                    }`}
-                    onClick={() => selectHandler(item.name)}
+                    className={"item block py-2 pl-3 pr-4 "}
+                    
                   >
-                    {item.name}
+                    <Scroll.Link
+                      activeClass="active"
+                      to={item.name}
+                      spy={true}
+                      offset={-70}
+                      duration={500}
+                      href='/'
+                      className={`${
+                        item.active
+                          ? "item border-l-4 border-indigo-500 bg-indigo-50  text-base font-medium text-indigo-700"
+                          : "item border-l-4 border-transparent  text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                      }`}
+                      onClick={() => selectHandler(item.name)}
+                    >
+                      {item.name}
+                    </Scroll.Link>
                   </Disclosure.Button>
                 ))}
               </div>
