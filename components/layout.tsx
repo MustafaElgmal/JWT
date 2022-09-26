@@ -8,7 +8,7 @@ const Layout = ({ children }: AppProps) => {
     <>
       <Header />
       <div>{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

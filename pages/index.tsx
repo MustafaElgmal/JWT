@@ -2,7 +2,6 @@
 import type { NextPage } from 'next'
 import Slider from '../components/slider';
 import Story from '../components/story';
-
 import { stories } from '../constants';
 
 const Home: NextPage = () => {
@@ -14,6 +13,5 @@ const Home: NextPage = () => {
 
   )
 }
-
 
 export default Home;
