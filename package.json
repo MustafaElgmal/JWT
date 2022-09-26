@@ -12,7 +12,6 @@
     "@headlessui/react": "^1.7.2",
     "@heroicons/react": "^2.0.11",
     "@prisma/client": "^4.3.1",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
@@ -28,7 +27,11 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+
     "@svgr/webpack": "^6.3.1",
+
     "@types/node": "18.7.20",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
