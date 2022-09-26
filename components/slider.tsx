@@ -8,16 +8,16 @@ interface Women {
 }
 
 const women = [
-    { name: "Mai Azzmy", position: "Position", quote: "Talent wins games, but teamwork and intelligence win championships", imgUrl: "https://rirpgoswmpvwobxaqbtk.supabase.co/storage/v1/object/public/workout/kneeHighJumb.jpg" },
-    { name: "Rana Nadim", position: "Position", quote: "Talent wins games, but teamwork and intelligence win championships", imgUrl: "https://rirpgoswmpvwobxaqbtk.supabase.co/storage/v1/object/public/workout/kneeHighJumb.jpg" },
-    { name: "Habiba Diab", position: "Position", quote: "Talent wins games, but teamwork and intelligence win championships", imgUrl: "https://rirpgoswmpvwobxaqbtk.supabase.co/storage/v1/object/public/workout/kneeHighJumb.jpg" }
+    {id:1, name: "Mai Azzmy", position: "Position", quote: "Talent wins games, but teamwork and intelligence win championships", imgUrl: "https://rirpgoswmpvwobxaqbtk.supabase.co/storage/v1/object/public/workout/kneeHighJumb.jpg" },
+    {id:2, name: "Rana Nadim", position: "Position", quote: "Talent wins games, but teamwork and intelligence win championships", imgUrl: "https://rirpgoswmpvwobxaqbtk.supabase.co/storage/v1/object/public/workout/kneeHighJumb.jpg" },
+    {id:3, name: "Habiba Diab", position: "Position", quote: "Talent wins games, but teamwork and intelligence win championships", imgUrl: "https://rirpgoswmpvwobxaqbtk.supabase.co/storage/v1/object/public/workout/kneeHighJumb.jpg" }
 ]
 
 const Slider = () => {
     return (
         <Carousel>
             {women.map((woman) => (
-                <Carousel.Item className="w-full relative h-500 h-full flex justify-center items-center">
+                <Carousel.Item key={woman.id} className="w-full relative h-500 h-full flex justify-center items-center">
                     <div className="w-full relative slider-height flex justify-center items-center">
                         <img className="transform hover:scale-105 transition ease-in-out duration-1000" src="https://static.shuffle.dev/components/preview/2c34f9b9-2c85-41cf-bacb-c88439ad8ae8/testimonials/03_d913a33f84.png" alt="" data-config-id="auto-img-1-3" data-path="0.0.0.0.0" />
                         <div className="  md:absolute left-0 top-0 px-14 py-11 w-3/4 md:w-1/2  overflow-y-auto h-full bg-fs " >
