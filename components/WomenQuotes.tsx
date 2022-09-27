@@ -25,7 +25,7 @@ const women = [
 function WomenQuotes() {
     return (
         <div id='women'>
-            <div className="container flex justify-center mx-auto pt-12">
+            <div className="container flex justify-center lg:mx-auto pt-12">
                 <div>
                     <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">The Talented Wounder Women Behind the Scenes of the Organization</h1>
                 </div>

@@ -12,5 +12,8 @@ module.exports = {
     }},
   },
   plugins: [require('@tailwindcss/aspect-ratio'),
-  require('@tailwindcss/forms')],
+    require('@tailwindcss/forms')],
+  variants: {
+    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+  },
 };

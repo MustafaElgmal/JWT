@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import BroadcastCards from '../components/BroadcastCards';
 import Broadcast from '../components/BroadcastCards';
 import ContactForm from '../components/contactForm';
+import InternShip from '../components/InternShip';
+import Opportunities from '../components/Opportinities';
 import Slider from '../components/slider';
 import Story from '../components/story';
 import WomenQuotes from '../components/WomenQuotes';
@@ -30,7 +32,9 @@ const Home: NextPage = () => {
       <Slider />
       <WomenQuotes />
       <Story stories={stories} />
+      <InternShip/>
       <BroadcastCards broadcasts={broadcasts} />
+      <Opportunities/>
       <ContactForm/>
     </div>
   );

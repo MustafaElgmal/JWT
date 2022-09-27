@@ -62,12 +62,12 @@ const Story = ({ stories }: AppProps) => {
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
               <img
                 className="md:block hidden"
-                src="https://i.ibb.co/Pc6XVVC/Rectangle-120.png"
+                src="https://lxwnzovjjfyhbnrqtzqh.supabase.co/storage/v1/object/public/jwt/bruce-mars-dNNfMegXUi4-unsplash.jpg"
                 alt="Liam featued Img"
               />
               <img
                 className="md:hidden block"
-                src="https://i.ibb.co/C5MMBcs/Rectangle-120.png"
+                src="https://lxwnzovjjfyhbnrqtzqh.supabase.co/storage/v1/object/public/jwt/bruce-mars-dNNfMegXUi4-unsplash.jpg"
                 alt="Liam featued Img"
               />
               <p className="font-medium text-xl leading-5 text-gray-800 mt-4">
@@ -80,12 +80,12 @@ const Story = ({ stories }: AppProps) => {
             <div className="p-4 pb-6 flex justify-center flex-col items-center">
               <img
                 className="md:block hidden"
-                src="https://i.ibb.co/7nSJPXQ/Rectangle-121.png"
+                src="https://lxwnzovjjfyhbnrqtzqh.supabase.co/storage/v1/object/public/jwt/joanna-nix-walkup-h2pnXHMz8YM-unsplash.jpg"
                 alt="Elijah featured img"
               />
               <img
                 className="md:hidden block"
-                src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
+                src="https://lxwnzovjjfyhbnrqtzqh.supabase.co/storage/v1/object/public/jwt/joanna-nix-walkup-h2pnXHMz8YM-unsplash.jpg"
                 alt="Elijah featured img"
               />
               <p className="font-medium text-xl leading-5 text-gray-800 mt-4">
