@@ -2,7 +2,7 @@ import React from "react";
 
 function Opportunities() {
     return (
-        <div className="md:mx-auto md:container pt-4">
+        <div id="opertunities" className="md:mx-auto md:container pt-4">
             <h1 className="text-2xl lg:text-6xl font-black">Careers</h1>
             <div className="pt-10 md:pt-20">
                 <div className="container mx-auto">
