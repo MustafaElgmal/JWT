@@ -2,7 +2,7 @@ import React from "react";
 
 function Opportunities() {
     return (
-        <div id="opertunities" className="md:mx-auto md:container pt-4">
+        <div id="opportunities" className="md:mx-auto md:container pt-4">
             <h1 className="text-2xl lg:text-6xl font-black">Careers</h1>
             <div className="pt-10 md:pt-20">
                 <div className="container mx-auto">
@@ -30,8 +30,8 @@ function Opportunities() {
                     </div>
                 </div>
             </div>
-            <div className="">
-                <div className="mx-auto">
+            <div>
+                <div className="container mx-auto">
                     <div className="flex flex-wrap flex-row-reverse items-center">
                         <h1 className="text-2xl lg:text-4xl  font-black">Senior Social & Data Analyst (French + Arabic)</h1>
                         <div className="md:w-1/2 lg:w-2/3 w-full lg:pl-20 md:pl-10 sm:pl-0 pl-0">
@@ -56,7 +56,7 @@ function Opportunities() {
                     </div>
                 </div>
             </div>
-            <div className="pb-32">
+            <div className="pb-16">
                 <div className="container mx-auto">
                     <div className="flex flex-wrap items-center pb-12">
                         <div className="md:w-1/2 lg:w-2/3 w-full xl:pr-20 md:pr-6">
