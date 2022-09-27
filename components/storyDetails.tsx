@@ -4,7 +4,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import { AppProps } from "../types";
 export default function StoryDetails({ story }: AppProps) {
   return (
-    <div>
+    <div className="bg-gray-50 min-h-screen">
       <div className="flex items-center justify-between h-full w-full absolute z-0">
         <div className="w-1/3 bg-white h-full" />
         <div className="w-4/6 ml-16 bg-gray-100 h-full" />

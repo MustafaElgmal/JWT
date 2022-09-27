@@ -4,7 +4,7 @@ import { AppProps } from '../types';
 
 export default function BroadcastCards({ broadcasts }: AppProps) {
   return (
-    <div className="bg-white">
+    <div  id='interviews'className="bg-white">
       <div className="relative overflow-hidden">
         <main>
           <div className="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
