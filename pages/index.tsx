@@ -35,7 +35,6 @@ const Home: NextPage = ({careers}:any) => {
 
     },[])
     // console.log(urlFor(careers[0].mainImage.asset))
-  
   return (
     <div>
       <Head>
