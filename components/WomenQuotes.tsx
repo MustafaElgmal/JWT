@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
 interface Women {
     name: string,
@@ -22,7 +23,10 @@ const women = [
         imgUrl: "https://i.ibb.co/X8PKD3q/Rectangle-8.png"
     }
 ]
+
+
 function WomenQuotes() {
+   
     return (
         <div id='women'>
             <div className="container flex justify-center lg:mx-auto pt-12">
