@@ -9,8 +9,8 @@ const Header = () => {
   const [menu, setMenu] = useState([
     { name: "women", active: true },
     { name: "stories", active: false },
-    { name: "interviews", active: false },
     { name: "internships", active: false },
+    { name: "interviews", active: false },
     { name: "opertunities", active: false },
     { name: "contact us", active: false },
   ]);
