@@ -30,8 +30,8 @@ function Opportunities() {
                     </div>
                 </div>
             </div>
-            <div className="">
-                <div className="mx-auto">
+            <div>
+                <div className="container mx-auto">
                     <div className="flex flex-wrap flex-row-reverse items-center">
                         <h1 className="text-2xl lg:text-4xl  font-black">Senior Social & Data Analyst (French + Arabic)</h1>
                         <div className="md:w-1/2 lg:w-2/3 w-full lg:pl-20 md:pl-10 sm:pl-0 pl-0">
