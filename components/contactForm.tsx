@@ -15,8 +15,9 @@ const ContactForm = (props: Props) => {
     onSubmit: async (values) => { },
   });
   return (
-    <div id='contact us' className="w-full flex items-center justify-center my-12 mt-5">
+    <div id='contact us' className="w-full flex items-center justify-center mb-10">
       <section className="relative bg-white" aria-labelledby="contact-heading">
+      <h1 className="text-2xl lg:text-6xl font-black mb-10">Contact Us</h1>
         <div className="absolute h-1/2 w-full bg-warm-gray-50" aria-hidden="true" />
         {/* Decorative dot pattern */}
 
@@ -192,7 +193,7 @@ const ContactForm = (props: Props) => {
                         name="first-name"
                         id="first-name"
                         autoComplete="given-name"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
                   </div>
@@ -206,7 +207,7 @@ const ContactForm = (props: Props) => {
                         name="last-name"
                         id="last-name"
                         autoComplete="family-name"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
                   </div>
@@ -220,7 +221,7 @@ const ContactForm = (props: Props) => {
                         name="email"
                         type="email"
                         autoComplete="email"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
                   </div>
@@ -239,7 +240,7 @@ const ContactForm = (props: Props) => {
                         name="phone"
                         id="phone"
                         autoComplete="tel"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                         aria-describedby="phone-optional"
                       />
                     </div>
@@ -258,7 +259,7 @@ const ContactForm = (props: Props) => {
                         id="message"
                         name="message"
                         rows={4}
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                         aria-describedby="message-max"
                         defaultValue={''}
                       />
@@ -267,7 +268,7 @@ const ContactForm = (props: Props) => {
                   <div className="sm:col-span-2 sm:flex sm:justify-end">
                     <button
                       type="submit"
-                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-teal-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:w-auto"
+                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:w-auto"
                     >
                       Submit
                     </button>
