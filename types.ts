@@ -1,10 +1,10 @@
 export interface AppProps {
-
   stories?: storyType[];
   children?: JSX.Element;
    podcasts?: BroadcastType[]
     podcast?: BroadcastType
   story?: storyType;
+  careers?: Career[],
 }
 
 
@@ -23,6 +23,7 @@ export interface storyType {
       _type: string;
     };
   };
+
 }
 
 export interface story {
@@ -30,6 +31,7 @@ export interface story {
   text: string;
   imageUrl: string;
 }
+
 
 
 export interface BroadcastType {
@@ -43,8 +45,28 @@ export interface BroadcastType {
             _type: string;
         };
     };
-    author: string
-    videoUrl: string
-    description: string
+     author:string;
+     videoUrl:string;
+     description:string;
 }
+
+export interface Career {
+    _createdAt: string
+    _id: string
+    _rev: string
+    _type: string
+    _updatedAt: string
+    description: string
+    "image": {
+        _type: string;
+        asset: {
+            _ref: string;
+            _type: string;
+        };
+    }
+    title: string
+}
+
+
+
 
