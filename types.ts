@@ -1,41 +1,81 @@
-import { date } from "yup"
+
+
 
 export interface AppProps {
-    stories?: story[]
-    children?: JSX.Element
-    broadcasts?: Broadcasts[]
-    story?:story
-    internships?:Internship[]
+  stories?: storyType[];
+  children?: JSX.Element;
+   podcasts?: BroadcastType[]
+    podcast?: BroadcastType
+  story?: storyType;
+  careers?: Career[],
+   internships?:Internship[]
     internship?:Internship
+}
+
+
+export interface storyType {
+  _createdAt: string;
+  _id: string;
+  _rev: string;
+  _type: string;
+  _updatedAt: string;
+  description: string;
+  title: string;
+  image: {
+    _type: string;
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
 
 }
 
 export interface story {
-    id: number
-    text: string
-    imageUrl: string
+  id: number;
+  text: string;
+  imageUrl: string;
 }
 
-export interface Broadcasts {
-    id: number;
+
+
+export interface BroadcastType {
+    _id: string;
     title: string;
-    href: string;
-    date: string;
-    datetime: string;
-    category: {
-        name: string;
-        href: string;
+    publishedAt: string;
+    image: {
+        _type: string;
+        asset: {
+            _ref: string;
+            _type: string;
+        };
     };
-    imageUrl: string;
-    preview: string;
-    author: {
-        name: string;
-        imageUrl: string;
-        href: string;
-    };
-    readingLength: string;
-
+     author:string;
+     videoUrl:string;
+     description:string;
 }
+
+export interface Career {
+    _createdAt: string
+    _id: string
+    _rev: string
+    _type: string
+    _updatedAt: string
+    description: string
+    "image": {
+        _type: string;
+        asset: {
+            _ref: string;
+            _type: string;
+        };
+    }
+    title: string
+}
+
+
+
+
+
 
 export interface Internship{
     _id:string,
@@ -54,3 +94,4 @@ export interface Internship{
       _updatedAt:string
 
 }
+
