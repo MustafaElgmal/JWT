@@ -1,5 +1,11 @@
 
 
+import { Internship } from "../types";
+
+
+
+
+
 import { Career } from "../types"
 
 import { sanityClient } from "../client";
@@ -64,4 +70,26 @@ export const getAllCareers = async (): Promise<Career[] | undefined> => {
         console.log(error)
     }
 }
+export async function getInternShip() {
+  let internship;
+  try {
+    internship = await sanityClient.fetch(
+      `*[_type=='internship'] | order(_createdAt desc) [0]`
+    );
+  } catch (e) {
+    console.log(e);
+  }
+  return internship;
+}
+
+export async function getAllInternShip() {
+  let internships: Internship[] = [];
+  try {
+    internships = await sanityClient.fetch(`*[_type=="internship"]`);
+  } catch (e) {
+    console.log(e);
+  }
+  return internships;
+}
+
 

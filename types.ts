@@ -1,3 +1,6 @@
+
+
+
 export interface AppProps {
   stories?: storyType[];
   children?: JSX.Element;
@@ -5,6 +8,8 @@ export interface AppProps {
     podcast?: BroadcastType
   story?: storyType;
   careers?: Career[],
+   internships?:Internship[]
+    internship?:Internship
 }
 
 
@@ -69,4 +74,24 @@ export interface Career {
 
 
 
+
+
+
+export interface Internship{
+    _id:string,
+    image: {
+        _type: string;
+        asset: {
+          _ref: string;
+          _type: string;
+        };
+      };
+      description:string,
+      title:string,
+      _rev:string,
+      _type:string,
+      _createdAt:string,
+      _updatedAt:string
+
+}
 

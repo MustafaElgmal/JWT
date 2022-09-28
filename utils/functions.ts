@@ -13,8 +13,8 @@ export const getNameFromPath = (path: string, setRouter: Function) => {
 
 
 
-export function createImageUrl(source: {
 
+export function createImageUrl(source: {
   _type: string;
   asset: {
     _ref: string;
