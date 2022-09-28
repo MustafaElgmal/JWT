@@ -7,7 +7,11 @@ export const getNameFromPath = (path: string, setRouter: Function) => {
   return name;
 };
 
-export function urlFor(source: string) {
-  const builder = imageUrlBuilder(sanityClient);
+export function createImageUrl(source: string) {
+  const builder:any = imageUrlBuilder(sanityClient);
   return builder.image(source);
 }
+
+
+
+
