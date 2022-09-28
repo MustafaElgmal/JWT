@@ -10,7 +10,7 @@ export default function InternShip({ internships }: AppProps) {
   return (
     <div className="bg-gray-50 min-h-screen grid lg:grid-cols-2 grid-cols-1">
       {internships?.map((internship) => (
-        <div className="xl:px-20 px-8 py-6 2xl:mx-auto 2xl:container relative z-40 ">
+        <div key={internship._id} className="xl:px-20 px-8 py-6 2xl:mx-auto 2xl:container relative z-40 ">
           <div>
             <div>
               <div className="mt-14 md:flex">
