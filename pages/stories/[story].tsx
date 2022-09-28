@@ -5,7 +5,7 @@ import React from "react";
 import StoryDetails from "../../components/storyDetails";
 import { AppProps } from "../../types";
 import { getAllStories } from "../../utils/apis";
-import StoryCompo from "../../components/story";
+import StoryCard  from "../../components/story";
 
 const Story = ({ story, stories }: AppProps) => {
   return (
@@ -18,7 +18,7 @@ const Story = ({ story, stories }: AppProps) => {
         />
       </div>
       <StoryDetails story={story} />
-      <StoryCompo stories={stories} />
+      <StoryCard stories={stories} />
     </div>
   );
 };

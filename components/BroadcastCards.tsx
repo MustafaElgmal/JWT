@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { AppProps } from '../types';
-import { getAllPodcasts, urlFor } from '../utils/functions';
+import { createImageUrl } from '../utils/functions';
 
 export default function BroadcastCards({ podcasts }: AppProps) {
-  console.log(podcasts);
+  
 
   return (
     <div id="interviews" className="bg-white">
@@ -27,7 +27,7 @@ export default function BroadcastCards({ podcasts }: AppProps) {
                       <div className="flex-shrink-0">
                         <img
                           className="h-48 w-full object-cover"
-                          src={urlFor(podcast.image)}
+                          src={createImageUrl(podcast.image)}
                           alt=""
                         />
                       </div>

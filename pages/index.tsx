@@ -5,9 +5,8 @@ import ContactForm from '../components/contactForm';
 import InternShip from '../components/InternShip';
 import Opportunities from '../components/Opportinities';
 import Slider from '../components/slider';
-import Story from '../components/story';
+import StoryCard  from '../components/story';
 import WomenQuotes from '../components/WomenQuotes';
-import { broadcasts } from '../constants';
 
 import { AppProps} from '../types';
 import { getFourStories,getThreeRecFromPodcasts,getAllPodcasts } from '../utils/apis';
@@ -20,7 +19,7 @@ const Home: NextPage = ({podcasts,stories}:AppProps) => {
       </Head>
       <Slider />
       <WomenQuotes />
-      <Story stories={stories} />
+      <StoryCard stories={stories} />
       <InternShip />
       <BroadcastCards podcasts={podcasts} />
       <Opportunities />
