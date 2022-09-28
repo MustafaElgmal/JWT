@@ -23,26 +23,4 @@ export function createImageUrl(source: {
 
 
 
-export const getAllPodcasts = async () => {
-  try {
-    const allPodcasts = await sanityClient.fetch(`*[_type=="podcast"]`)
-    return allPodcasts
-
-  } catch (error) {
-    console.log(error);
-
-  }
-}
-
-export const getThreeRecFromPodcasts = async () => {
-  try {
-    const podcasts = await sanityClient.fetch(`*[_type=="podcast"][0...3]`)
-    return podcasts
-
-  } catch (error) {
-    console.log(error);
-
-  }
-
-}
 
