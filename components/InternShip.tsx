@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { AppProps, Internship } from "../types";
-import { createImageURL } from "../utils/functions";
+import { createImageUrl } from "../utils/functions";
 
 export default function InternShip({ internship }: AppProps) {
   return (
@@ -20,7 +20,7 @@ export default function InternShip({ internship }: AppProps) {
             <div className="mt-14  md:flex">
               <div className="relative flex justify-center lg:w-1/2 sm:w-96 xl:h-96 h-80">
                 <img
-                  src={createImageURL(internship?.image!)}
+                  src={createImageUrl(internship?.image!)}
                   alt="image of profile"
                   className="h-full flex-shrink-0 object-fit object-cover shadow-lg rounded"
                 />

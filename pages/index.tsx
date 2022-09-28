@@ -1,37 +1,17 @@
 
-import type { GetStaticProps, NextPage } from "next";
+import type {NextPage } from "next";
 import Head from "next/head";
-import { sanityClient } from "../client";
 import BroadcastCards from "../components/BroadcastCards";
-import Broadcast from "../components/BroadcastCards";
 import ContactForm from "../components/contactForm";
 import InternShip from "../components/InternShip";
 import Opportunities from "../components/Opportinities";
 import Slider from "../components/slider";
 import StoryCard  from '../components/story';
 import WomenQuotes from "../components/WomenQuotes";
-import { stories } from "../constants";
-import { broadcasts } from "../constants";
+
 import { AppProps, Internship } from "../types";
-import { getInternShip } from "../utils/apis";
+import { getFourStories, getInternShip, getThreeRecFromPodcasts } from "../utils/apis";
 import {getCareerUsingPagination } from '../utils/apis';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 
 
 const Home: NextPage = ({podcasts,stories,careers,internship}:AppProps) => {
@@ -61,7 +41,7 @@ export const getStaticProps = async () => {
   const careers = await getCareerUsingPagination();
   const internship = await getInternShip();
   return {
-    props: { podcasts,stories,careers,internships },
+    props: { podcasts,stories,careers,internship },
     revalidate:172800
   };
 };
