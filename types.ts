@@ -1,9 +1,12 @@
 export interface AppProps {
+
   stories?: storyType[];
   children?: JSX.Element;
-  broadcasts?: Broadcasts[];
+   podcasts?: BroadcastType[]
+    podcast?: BroadcastType
   story?: storyType;
 }
+
 
 export interface storyType {
   _createdAt: string;
@@ -28,22 +31,20 @@ export interface story {
   imageUrl: string;
 }
 
-export interface Broadcasts {
-  id: number;
-  title: string;
-  href: string;
-  date: string;
-  datetime: string;
-  category: {
-    name: string;
-    href: string;
-  };
-  imageUrl: string;
-  preview: string;
-  author: {
-    name: string;
-    imageUrl: string;
-    href: string;
-  };
-  readingLength: string;
+
+export interface BroadcastType {
+    _id: string;
+    title: string;
+    publishedAt: string;
+    image: {
+        _type: string;
+        asset: {
+            _ref: string;
+            _type: string;
+        };
+    };
+    author: string
+    videoUrl: string
+    description: string
 }
+

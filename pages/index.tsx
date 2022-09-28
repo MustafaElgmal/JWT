@@ -8,10 +8,11 @@ import Slider from '../components/slider';
 import Story from '../components/story';
 import WomenQuotes from '../components/WomenQuotes';
 import { broadcasts } from '../constants';
+
 import { AppProps} from '../types';
-import { getFourStories } from '../utils/apis';
-const Home: NextPage = ({stories}:AppProps) => {
-  console.log(stories)
+import { getFourStories,getThreeRecFromPodcasts,getAllPodcasts } from '../utils/apis';
+const Home: NextPage = ({podcasts,stories}:AppProps) => {
+  
   return (
     <div>
       <Head>
@@ -20,21 +21,21 @@ const Home: NextPage = ({stories}:AppProps) => {
       <Slider />
       <WomenQuotes />
       <Story stories={stories} />
-      <InternShip/>
-      <BroadcastCards broadcasts={broadcasts} />
-      <Opportunities/>
-      <ContactForm/>
+      <InternShip />
+      <BroadcastCards podcasts={podcasts} />
+      <Opportunities />
+      <ContactForm />
     </div>
   );
 };
 
-export const getStaticProps:GetStaticProps= async()=>{
-  const stories=await getFourStories()
-  return{
-      props:{stories},
-      revalidate:172800
-  }
-}
-
-
 export default Home;
+
+export const getStaticProps = async () => {
+  const podcasts = await getThreeRecFromPodcasts();
+  const stories=await getFourStories()
+  return {
+    props: { podcasts,stories },
+    revalidate:172800
+  };
+};
