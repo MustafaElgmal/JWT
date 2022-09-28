@@ -2,6 +2,8 @@
 import React from "react";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { AppProps } from "../types";
+import { GetStaticProps } from "next";
+import { getAllStories } from "../utils/apis";
 export default function StoryDetails({ story }: AppProps) {
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -47,4 +49,14 @@ export default function StoryDetails({ story }: AppProps) {
       </div>
     </div>
   );
+}
+
+export const getStaticProps:GetStaticProps=async({params})=>{
+  const stores=await getAllStories()
+  
+  return{
+    props:{stores},
+    revalidate:172800
+  }
+
 }

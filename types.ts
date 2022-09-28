@@ -1,18 +1,36 @@
-
 export interface AppProps {
-    stories?: story[]
-    children?: JSX.Element
-    podcasts?: BroadcastType[]
-    podcast?: BroadcastType
-    story?: story
 
+  stories?: storyType[];
+  children?: JSX.Element;
+   podcasts?: BroadcastType[]
+    podcast?: BroadcastType
+  story?: storyType;
+}
+
+
+export interface storyType {
+  _createdAt: string;
+  _id: string;
+  _rev: string;
+  _type: string;
+  _updatedAt: string;
+  description: string;
+  title: string;
+  image: {
+    _type: string;
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
 }
 
 export interface story {
-    id: number
-    text: string
-    imageUrl: string
+  id: number;
+  text: string;
+  imageUrl: string;
 }
+
 
 export interface BroadcastType {
     _id: string;
@@ -29,3 +47,4 @@ export interface BroadcastType {
     videoUrl: string
     description: string
 }
+
