@@ -11,7 +11,7 @@ const Header = () => {
     { name: "stories", active: false },
     { name: "internships", active: false },
     { name: "interviews", active: false },
-    { name: "opertunities", active: false },
+    { name: "opportunities", active: false },
     { name: "contact us", active: false },
   ]);
 

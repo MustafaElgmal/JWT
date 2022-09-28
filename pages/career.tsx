@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetStaticProps } from 'next';
 import React from 'react'
-import Opportunities from '../components/Opportinities';
+import Opportunities from '../components/Opportunities';
 import { AppProps } from '../types';
 import { getAllCareers } from '../utils/apis';
 
