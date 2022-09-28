@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { AppProps } from "../types";
-import { createImageURL } from "../utils/functions";
+import { createImageUrl } from "../utils/functions";
 
 function Opportunities({ careers }: AppProps) {
     return (
@@ -29,7 +30,7 @@ function Opportunities({ careers }: AppProps) {
                                         </div>
                                     </div>
                                     <div className="lg:w-1/3 md:w-1/2 w-full relative h-96 flex items-end justify-center">
-                                        <img className="absolute w-full h-full inset-0  object-center" src={createImageURL(career.image)} alt="" />
+                                        <img className="absolute w-full h-full inset-0  object-center" src={createImageUrl(career.image)} alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +55,7 @@ function Opportunities({ careers }: AppProps) {
                                         </div>
                                     </div>
                                     <div className="lg:w-1/3 md:w-1/2 w-full relative h-96 flex items-end justify-center">
-                                        <img className="absolute w-full h-full " src={createImageURL(career.image)} alt="" />
+                                        <img className="absolute w-full h-full " src={createImageUrl(career.image)} alt="" />
                                     </div>
                                 </div>
                             </div>
