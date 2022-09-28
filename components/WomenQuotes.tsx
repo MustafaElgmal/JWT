@@ -26,7 +26,6 @@ const women = [
 
 
 function WomenQuotes() {
-   
     return (
         <div id='women'>
             <div className="container flex justify-center lg:mx-auto pt-12">
@@ -47,7 +46,7 @@ function WomenQuotes() {
                                     </div>
                                     <div className="px-6 pt-16 mt-16 ">
                                         <div className="font-bold text-center pt-1 pb-1">{woman.name}</div>
-                                        <p className="text-gray-500 text-sm text-center">{woman.position }</p>
+                                        <p className="text-gray-500 text-sm text-center">{woman.position}</p>
                                         <p className="text-center text-gray-600 text-base font-normal"><q>{woman.quote}</q></p>
                                         <div className=" flex justify-center pt-1 pb-3">
                                             <a href="javascript:void(0)" className="mx-1">
@@ -73,9 +72,9 @@ function WomenQuotes() {
                         ))}
                     </div>
                     <div className='xl:text-4xl text-3xl text-center text-gray-800 font-extrabold py-6 sm:w-4/6 w-5/6 mx-auto'>
-                    <Link href="/Women">
+                        <Link href="/Women">
                             <a className='lg:text-2xl text-sm text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto text-decoration-none'>See All Our Wounder Woman</a>
-                    </Link>
+                        </Link>
                     </div>
                 </div>
             </div>
