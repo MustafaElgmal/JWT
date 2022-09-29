@@ -9,7 +9,7 @@ function WomenQuotes() {
         <div className="container flex justify-center lg:mx-auto pt-12">
           <div>
             <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
-              The Talented Wounder Women Behind the Scenes of the Organization
+              The Talented Wunder Women Behind the Scenes of the Organization
             </h1>
           </div>
         </div>
@@ -99,7 +99,7 @@ function WomenQuotes() {
       <div className="text-center bg-gray-500  py-2 lg:w-80 w-48 mx-auto  mt-10">
         <Link href="/Women">
           <a className="lg:text-xl p-2 text-sm text-center text-gray-100 font-bold text-decoration-none hover:text-white">
-            See Our Wounder Women
+            See Our Wunder Women
           </a>
         </Link>
       </div>

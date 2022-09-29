@@ -15,7 +15,7 @@ function Opportunities({ careers }: AppProps) {
               <div className="container mx-auto">
                 <div className="flex flex-wrap items-center pb-12">
                   <div className="md:w-1/2 lg:w-2/3 w-full xl:pr-20 md:pr-6">
-                    <h1 className="text-xl lg:text-4xl  font-black">
+                    <h1 className="text-xl lg:text-4xl  font-bold">
                       {career.title}
                     </h1>
                     <div className="py-2 text-color">
