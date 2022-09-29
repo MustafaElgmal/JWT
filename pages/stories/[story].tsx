@@ -12,7 +12,7 @@ const Story = ({ story, stories }: AppProps) => {
     <div>
       <div>
         <img
-          src="https://review2020.s3.us-east-1.amazonaws.com/1664325461811sicpic2.jpg"
+          src="https://review2020.s3.us-east-1.amazonaws.com/1664444966271slack-imgs.png"
           alt="landimg"
           className="bg-cover bg-center w-full"
         />

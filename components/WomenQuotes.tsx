@@ -2,28 +2,7 @@
 /* eslint-disable react/jsx-key */
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
-interface Women {
-    name: string,
-    quote: string,
-    imgUrl: string,
-    position: string,
-}
-
-const women = [
-    {
-        id: 1, name: "Mai Azzmy", position: "Position", quote: "Talent wins games, but teamwork and intelligence win championships",
-        imgUrl: "https://i.ibb.co/kBgtHK6/Rectangle-5.png"
-    },
-    {
-        id: 2, name: "Rana Nadim", position: "Position", quote: "Talent wins games, but teamwork and intelligence win championships",
-        imgUrl: "https://i.ibb.co/6PR2Y74/Rectangle-15.png"
-    },
-    {
-        id: 3, name: "Habiba Diab", position: "Position", quote: "Talent wins games, but teamwork and intelligence win championships",
-        imgUrl: "https://i.ibb.co/X8PKD3q/Rectangle-8.png"
-    }
-]
-
+import {women} from '../constants/index'
 
 function WomenQuotes() {
     return (
@@ -36,7 +15,7 @@ function WomenQuotes() {
             <div className="w-full bg-pink-200 px-10 pt-10">
                 <div className="container mx-auto">
                     <div className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
-                        {women.map((woman: Women) => (
+                        {women.map((woman) => (
                             <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 lg:mb-2  mb-32  sm:mb-24 xl:max-w-sm lg:w-2/5">
                                 <div className="rounded overflow-hidden shadow-md bg-white">
                                     <div className="absolute -mt-24 w-full flex justify-center">
