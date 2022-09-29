@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon,  XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -7,11 +7,11 @@ import * as Scroll from "react-scroll";
 
 const Header = () => {
   const [menu, setMenu] = useState([
-    { name: "women", active: true },
+    { name: "women", active:false},
     { name: "stories", active: false },
     { name: "internships", active: false },
     { name: "interviews", active: false },
-    { name: "opertunities", active: false },
+    { name: "opportunities", active: false },
     { name: "contact us", active: false },
   ]);
 
@@ -24,6 +24,7 @@ const Header = () => {
 
     setMenu(filterdMenu);
   };
+
 
   return (
     <header className="fixed-top">

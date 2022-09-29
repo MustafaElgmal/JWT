@@ -1,5 +1,7 @@
 import imageUrlBuilder from "@sanity/image-url";
 import { sanityClient } from "../client";
+const builder: any = imageUrlBuilder(sanityClient)
+
 export const getNameFromPath = (path: string, setRouter: Function) => {
   const parts = path.split("/");
   const name = parts[parts.length - 1];
@@ -7,8 +9,12 @@ export const getNameFromPath = (path: string, setRouter: Function) => {
   return name;
 };
 
-const builder: any = imageUrlBuilder(sanityClient);
-export function createImageURL(source: {
+
+
+
+
+
+export function createImageUrl(source: {
   _type: string;
   asset: {
     _ref: string;
@@ -17,3 +23,7 @@ export function createImageURL(source: {
 }) {
   return builder.image(source);
 }
+
+
+
+

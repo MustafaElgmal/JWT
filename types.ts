@@ -1,56 +1,97 @@
-import { date } from "yup"
+
+
 
 export interface AppProps {
-    stories?: story[]
-    children?: JSX.Element
-    broadcasts?: Broadcasts[]
-    story?:story
-    internships?:Internship[]
-    internship?:Internship
+  stories?: storyType[];
+  children?: JSX.Element;
+  podcasts?: BroadcastType[]
+  podcast?: BroadcastType
+  story?: storyType;
+  careers?: Career[],
+  internships?: Internship[]
+  internship?: Internship
+}
+
+
+export interface storyType {
+  _createdAt: string;
+  _id: string;
+  _rev: string;
+  _type: string;
+  _updatedAt: string;
+  description: string;
+  title: string;
+  image: {
+    _type: string;
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
 
 }
 
 export interface story {
-    id: number
-    text: string
-    imageUrl: string
+  id: number;
+  text: string;
+  imageUrl: string;
 }
 
-export interface Broadcasts {
-    id: number;
-    title: string;
-    href: string;
-    date: string;
-    datetime: string;
-    category: {
-        name: string;
-        href: string;
+
+
+export interface BroadcastType {
+  _id: string;
+  title: string;
+  publishedAt: string;
+  image: {
+    _type: string;
+    asset: {
+      _ref: string;
+      _type: string;
     };
-    imageUrl: string;
-    preview: string;
-    author: {
-        name: string;
-        imageUrl: string;
-        href: string;
+  };
+  author: string;
+  videoUrl: string;
+  description: string;
+}
+
+export interface Career {
+  _createdAt: string
+  _id: string
+  _rev: string
+  _type: string
+  _updatedAt: string
+  description: string
+  "image": {
+    _type: string;
+    asset: {
+      _ref: string;
+      _type: string;
     };
-    readingLength: string;
+  }
+  title: string
+}
+
+
+
+
+
+
+export interface Internship {
+  _id: string,
+  image: {
+    _type: string;
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
+  description: string,
+  title: string,
+  _rev: string,
+  _type: string,
+  _createdAt: string,
+  _updatedAt: string
 
 }
 
-export interface Internship{
-    _id:string,
-    image: {
-        _type: string;
-        asset: {
-          _ref: string;
-          _type: string;
-        };
-      };
-      description:string,
-      title:string,
-      _rev:string,
-      _type:string,
-      _createdAt:string,
-      _updatedAt:string
-
-}
