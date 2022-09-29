@@ -90,21 +90,25 @@ const Footer = () => {
                 style={{ height: 35, width: 35 }}
                 url="https://www.facebook.com/WundermanThompson/"
                 bgColor="white"
+                target='_blanck'
               />
               <SocialIcon
                 style={{ height: 35, width: 35 }}
-                url="https://twitter.com/Fahad_Alshemali"
+                url="https://twitter.com/JWTCairo"
                 bgColor="white"
+                target='_blanck'
               />
               <SocialIcon
                 style={{ height: 35, width: 35 }}
                 url="https://www.instagram.com/wunthompson/"
                 bgColor="white"
+                target='_blanck'
               />
               <SocialIcon
                 style={{ height: 35, width: 35 }}
                 url="https://www.linkedin.com/company/wunderman-thompson-/"
                 bgColor="white"
+                target='_blanck'
               />
             </div>
           </div>
