@@ -1,31 +1,34 @@
 import { useFormik } from "formik";
+import * as Yup from "yup";
 import React from "react";
-import {
-  Bars3Icon,
-  EnvelopeIcon,
-  PhoneIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 type Props = {};
 
 const ContactForm = (props: Props) => {
   const formik = useFormik({
     initialValues: {
-      name: "ss",
+      firstName: "",
+      lastName: "",
       email: "",
-      number: "",
+      phone: "",
       message: "",
     },
-    onSubmit: async (values) => {},
+    validationSchema: Yup.object({
+      firstName: Yup.string().required("FirstName is required!"),
+      LastName: Yup.string().required("LastName is required!"),
+      Email: Yup.string().required("Email is required!"),
+      Phone: Yup.string().required("Phone is required!"),
+      message: Yup.string().required("Message is required!"),
+    }),
+    onSubmit: async (values) => {
+      console.log(values);
+    },
   });
   return (
-    <div
-      id="contact us"
-      className="w-full flex items-center justify-center"
-    >
+    <div id="contact us" className="w-full flex items-center justify-center">
       <section className="relative bg-white" aria-labelledby="contact-heading">
         <h1 className="text-2xl lg:text-6xl font-black mb-10">Contact Us</h1>
-        
+
         {/* Decorative dot pattern */}
 
         <div className="mx-auto max-w-full">
@@ -163,7 +166,11 @@ const ContactForm = (props: Props) => {
                 </dl>
                 <ul role="list" className="mt-8 flex space-x-12">
                   <li>
-                    <a className="text-white hover:text-white" href="https://www.facebook.com/WundermanThompson" target='_blanck'>
+                    <a
+                      className="text-white hover:text-white"
+                      href="https://www.facebook.com/WundermanThompson"
+                      target="_blanck"
+                    >
                       <span className="sr-only">Facebook</span>
                       <svg
                         className="h-7 w-7"
@@ -180,7 +187,11 @@ const ContactForm = (props: Props) => {
                     </a>
                   </li>
                   <li>
-                    <a className="text-white hover:text-white" href="https://twitter.com/JWTCairo" target='_blanck'>
+                    <a
+                      className="text-white hover:text-white"
+                      href="https://twitter.com/JWTCairo"
+                      target="_blanck"
+                    >
                       <span className="sr-only">Twitter</span>
                       <svg
                         className="h-7 w-7"
@@ -216,6 +227,9 @@ const ContactForm = (props: Props) => {
                       <input
                         type="text"
                         name="first-name"
+                        value={formik.values.firstName}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                         id="first-name"
                         autoComplete="given-name"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
@@ -233,6 +247,9 @@ const ContactForm = (props: Props) => {
                       <input
                         type="text"
                         name="last-name"
+                        value={formik.values.lastName}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                         id="last-name"
                         autoComplete="family-name"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
@@ -250,6 +267,9 @@ const ContactForm = (props: Props) => {
                       <input
                         id="email"
                         name="email"
+                        value={formik.values.email}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                         type="email"
                         autoComplete="email"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
@@ -275,6 +295,9 @@ const ContactForm = (props: Props) => {
                       <input
                         type="text"
                         name="phone"
+                        value={formik.values.phone}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                         id="phone"
                         autoComplete="tel"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
@@ -301,6 +324,9 @@ const ContactForm = (props: Props) => {
                       <textarea
                         id="message"
                         name="message"
+                        value={formik.values.message}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                         rows={4}
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                         aria-describedby="message-max"
