@@ -10,7 +10,7 @@ export const women = [
     imgUrl: "https://i.ibb.co/6PR2Y74/Rectangle-15.png"
   },
   {
-    id: 3, name: "Habiba Diab", position: "Position", quote: "As a member of our global wunderman thompson family, I am proud to be amongst such incredible talent and humbled to be a contributor of our flourishing success",
+    id: 3, name: "Habiba Diab", position: "Position", quote: "As a member of our global wunderman thompson family.",
     imgUrl: "https://i.ibb.co/X8PKD3q/Rectangle-8.png"
   }
 ];
