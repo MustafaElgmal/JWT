@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { AppProps } from "../types";
+import { createImageUrl } from "../utils/functions";
 
 const Story = ({ stories }: AppProps) => {
   return (
@@ -33,19 +34,19 @@ const Story = ({ stories }: AppProps) => {
               >
                 <img
                   className="md:block hidden"
-                  src="https://i.ibb.co/FYTKDG6/Rectangle-118-2.png"
+                  src={createImageUrl(story?.image!)}
                   alt="Alexa featured Img"
                 />
                 <img
                   className="md:hidden block"
-                  src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
+                  src={createImageUrl(story?.image!)}
                   alt="Alexa featured Img"
                 />
                 <p className="font-medium text-xl leading-5 text-gray-800 mt-4">
-                  Alexa
+                  {story.owner}
                 </p>
                 <Link href={`/stories/${story._id}`}>
-                  <a className="font-medium hover:text-indigo-500">
+                  <a className="font-medium hover:text-indigo-500 text-decoration-none">
                     Read my story
                   </a>
                 </Link>

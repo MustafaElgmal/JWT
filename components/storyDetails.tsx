@@ -4,6 +4,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import { AppProps } from "../types";
 import { GetStaticProps } from "next";
 import { getAllStories } from "../utils/apis";
+import { createImageUrl } from "../utils/functions";
 export default function StoryDetails({ story }: AppProps) {
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -17,15 +18,12 @@ export default function StoryDetails({ story }: AppProps) {
           <br />
           saying
         </h1>
-        <h1 className="text-5xl font-bold xl:hidden block leading-tight lg:leading-10 text-gray-800">
-          What our customers are saying
-        </h1>
         <div>
           <div className="flex">
             <div className="mt-14 md:flex">
               <div className="relative lg:w-1/2 sm:w-96 xl:h-96 h-80">
                 <img
-                  src="https://i.ibb.co/4g1D9cv/imgslider1.png"
+                  src={createImageUrl(story?.image!)}
                   alt="image of profile"
                   className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded"
                 />
@@ -36,10 +34,7 @@ export default function StoryDetails({ story }: AppProps) {
                     Some of the best work that was done!
                   </h1>
                   <p className="text-base font-medium leading-6 mt-4 text-gray-600">
-                    Our core values are at the heart of all that we do. They are
-                    integrated into our daily work lives and help us to remember
-                    our customers always comes first, the last thank you should
-                    always comes from us.
+                    {story?.story}
                   </p>
                 </div>
               </div>
@@ -51,12 +46,11 @@ export default function StoryDetails({ story }: AppProps) {
   );
 }
 
-export const getStaticProps:GetStaticProps=async({params})=>{
-  const stores=await getAllStories()
-  
-  return{
-    props:{stores},
-    revalidate:172800
-  }
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const stores = await getAllStories();
 
-}
+  return {
+    props: { stores },
+    revalidate: 172800,
+  };
+};

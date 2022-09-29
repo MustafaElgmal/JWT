@@ -14,13 +14,13 @@ export interface AppProps {
 
 
 export interface storyType {
+  
   _createdAt: string;
   _id: string;
   _rev: string;
   _type: string;
   _updatedAt: string;
-  description: string;
-  title: string;
+  story: string;
   image: {
     _type: string;
     asset: {
@@ -28,6 +28,7 @@ export interface storyType {
       _type: string;
     };
   };
+  owner:string
 
 }
 
