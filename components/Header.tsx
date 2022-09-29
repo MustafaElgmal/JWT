@@ -54,7 +54,7 @@ const Header = () => {
                         href="/"
                         to={item.name}
                         spy={true}
-                        offset={-70}
+                        offset={-60}
                         duration={500}
                         key={item.name}
                         className={`${

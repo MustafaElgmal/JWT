@@ -27,10 +27,10 @@ export default function InternShip({ internship }: AppProps) {
               </div>
               <div className="md:w-2/3 lg:w-2/3 xl:ml-10 md:ml-10 md:mt-0 mt-4 flex flex-col justify-between">
                 <div>
-                  <h1 className="text-6xl font-semibold xl:leading-loose text-gray-800">
+                  <h1 className=" text-4xl lg:text-6xl md:text-5xl font-semibold xl:leading-loose text-gray-800">
                     {internship?.title}
                   </h1>
-                  <p className="text-xl lg:text-3xl  py-4 md:py-4">
+                  <p className="font-bold text-2xl leading-8 text-gray-600">
                     {internship?.description}
                   </p>
                 </div>
@@ -38,13 +38,13 @@ export default function InternShip({ internship }: AppProps) {
             </div>
           </div>
         </div>
-        <div className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold py-6 sm:w-4/6 w-5/6 mx-auto">
-          <Link href="/internShips">
-            <a className="lg:text-2xl text-sm text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto text-decoration-none">
-              See All Our internship
-            </a>
-          </Link>
-        </div>
+        <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
+        <Link href="/internShips">
+          <a className="lg:text-xl p-2 text-sm text-center text-gray-100 font-bold text-decoration-none hover:text-white">
+            See Our Internships
+          </a>
+        </Link>
+      </div>
       </div>
     </div>
   );
