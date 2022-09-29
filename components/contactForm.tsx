@@ -21,18 +21,15 @@ const ContactForm = (props: Props) => {
   return (
     <div
       id="contact us"
-      className="w-full flex items-center justify-center mb-10"
+      className="w-full flex items-center justify-center"
     >
       <section className="relative bg-white" aria-labelledby="contact-heading">
         <h1 className="text-2xl lg:text-6xl font-black mb-10">Contact Us</h1>
-        <div
-          className="absolute h-1/2 w-full bg-warm-gray-50"
-          aria-hidden="true"
-        />
+        
         {/* Decorative dot pattern */}
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="relative bg-white shadow-xl">
+        <div className="mx-auto max-w-full">
+          <div className="relative bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-3">
               {/* Contact information */}
               <div className="relative overflow-hidden bg-gradient-to-b from-blue-700 to-blue-600 py-10 px-6 sm:px-10 xl:p-12">

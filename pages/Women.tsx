@@ -11,7 +11,7 @@ function Women() {
       </div>
       <div className="xl:w-1/2 w-11/12 lg:my-5 my-2">
         <h1 className="xl:text-5xl font-bold text-center text-gray-800">
-          IN Touching With Our Wounder Woman
+          IN Touching With Our Wunder Woman
         </h1>
       </div>
       <div className="container mx-auto mt-5">
