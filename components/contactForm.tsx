@@ -23,7 +23,7 @@ const ContactForm = (props: Props) => {
     }),
     onSubmit: async (values) => {
       const res = await axios.post("/api/sendgrid", values);
-      if (res.status === 200) {
+      if (res.status === 201) {
         alert("Form is submit!");
       }
       formik.resetForm();
