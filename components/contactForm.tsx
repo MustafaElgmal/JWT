@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import React from "react";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import axios from "axios";
 type Props = {};
 
 const ContactForm = (props: Props) => {
@@ -10,18 +11,22 @@ const ContactForm = (props: Props) => {
       firstName: "",
       lastName: "",
       email: "",
-      phone: "",
+      phoneNumber: "",
       message: "",
     },
     validationSchema: Yup.object({
       firstName: Yup.string().required("FirstName is required!"),
-      LastName: Yup.string().required("LastName is required!"),
-      Email: Yup.string().required("Email is required!"),
-      Phone: Yup.string().required("Phone is required!"),
+      lastName: Yup.string().required("LastName is required!"),
+      email: Yup.string().required("Email is required!"),
+      phoneNumber: Yup.string().required("Phone is required!"),
       message: Yup.string().required("Message is required!"),
     }),
     onSubmit: async (values) => {
-      console.log(values);
+      const res = await axios.post("/api/sendgrid", values);
+      if (res.status === 200) {
+        alert("Form is submit!");
+      }
+      formik.resetForm();
     },
   });
   return (
@@ -211,26 +216,23 @@ const ContactForm = (props: Props) => {
                 <h3 className="text-lg font-medium text-warm-gray-900">
                   Send us a message
                 </h3>
-                <form
-                  action="#"
-                  method="POST"
-                  className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-                >
+                <form className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                   <div>
                     <label
-                      htmlFor="first-name"
+                      htmlFor="firstName"
                       className="block text-sm font-medium text-warm-gray-900"
                     >
                       First name
                     </label>
                     <div className="mt-1">
                       <input
+                        required
                         type="text"
-                        name="first-name"
+                        name="firstName"
                         value={formik.values.firstName}
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-                        id="first-name"
+                        id="firstName"
                         autoComplete="given-name"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
@@ -238,19 +240,20 @@ const ContactForm = (props: Props) => {
                   </div>
                   <div>
                     <label
-                      htmlFor="last-name"
+                      htmlFor="lastName"
                       className="block text-sm font-medium text-warm-gray-900"
                     >
                       Last name
                     </label>
                     <div className="mt-1">
                       <input
+                        required
                         type="text"
-                        name="last-name"
+                        name="lastName"
                         value={formik.values.lastName}
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-                        id="last-name"
+                        id="lastName"
                         autoComplete="family-name"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
@@ -265,6 +268,7 @@ const ContactForm = (props: Props) => {
                     </label>
                     <div className="mt-1">
                       <input
+                        required
                         id="email"
                         name="email"
                         value={formik.values.email}
@@ -279,29 +283,23 @@ const ContactForm = (props: Props) => {
                   <div>
                     <div className="flex justify-between">
                       <label
-                        htmlFor="phone"
+                        htmlFor="phoneNumber"
                         className="block text-sm font-medium text-warm-gray-900"
                       >
-                        Phone
+                        phoneNumber
                       </label>
-                      <span
-                        id="phone-optional"
-                        className="text-sm text-warm-gray-500"
-                      >
-                        Optional
-                      </span>
                     </div>
                     <div className="mt-1">
                       <input
+                        required
                         type="text"
-                        name="phone"
-                        value={formik.values.phone}
+                        name="phoneNumber"
+                        value={formik.values.phoneNumber}
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-                        id="phone"
+                        id="phoneNumber"
                         autoComplete="tel"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                        aria-describedby="phone-optional"
                       />
                     </div>
                   </div>
@@ -322,6 +320,7 @@ const ContactForm = (props: Props) => {
                     </div>
                     <div className="mt-1">
                       <textarea
+                        required
                         id="message"
                         name="message"
                         value={formik.values.message}
@@ -336,7 +335,8 @@ const ContactForm = (props: Props) => {
                   </div>
                   <div className="sm:col-span-2 sm:flex sm:justify-end">
                     <button
-                      type="submit"
+                      type="button"
+                      onClick={() => formik.handleSubmit()}
                       className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-imperial-600 focus:outline-none focus:ring-2 focus:bg-blue-600 focus:ring-offset-2 sm:w-auto"
                     >
                       Submit
