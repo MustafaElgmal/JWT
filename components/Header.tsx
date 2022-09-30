@@ -41,7 +41,7 @@ const Header = () => {
                     <Link href="/">
                       <img
                         className="block h-8 w-auto lg:hnameden"
-                        src="https://review2020.s3.us-east-1.amazonaws.com/1664216788841Wunderman_Thompson_2018.png"
+                        src="https://nipsxawvnjrdqkigovgl.supabase.co/storage/v1/object/public/workout/Wunderman_Thompson_2018.png"
                         alt="Your Company"
                       />
                     </Link>
