@@ -8,7 +8,7 @@ import { createImageUrl } from "../utils/functions";
 export default function StoryDetails({ story }: AppProps) {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="flex items-center justify-between h-full w-full absolute z-0">
+      <div className="flex items-center justify-between w-full absolute z-0">
         <div className="w-1/3 bg-white h-full" />
         <div className="w-4/6 ml-16 bg-gray-100 h-full" />
       </div>
@@ -30,10 +30,10 @@ export default function StoryDetails({ story }: AppProps) {
               </div>
               <div className="md:w-1/3 lg:w-1/3 xl:ml-32 md:ml-20 md:mt-0 mt-4 flex flex-col justify-between">
                 <div>
-                  <h1 className="text-2xl font-semibold xl:leading-loose text-gray-800">
+                  <h1 className="text-2xl font-extrabold xl:leading-loose text-gray-800">
                     Some of the best work that was done!
                   </h1>
-                  <p className="text-base font-medium leading-6 mt-4 text-gray-600">
+                  <p className="text-xl font-semibold leading-6 mt-4 text-gray-700">
                     {story?.story}
                   </p>
                 </div>
