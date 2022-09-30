@@ -1,8 +1,14 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import React from "react";
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
+import {
+  Bars3Icon,
+  EnvelopeIcon,
+  PhoneIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+
 type Props = {};
 
 const ContactForm = (props: Props) => {
@@ -14,6 +20,7 @@ const ContactForm = (props: Props) => {
       phoneNumber: "",
       message: "",
     },
+
     validationSchema: Yup.object({
       firstName: Yup.string().required("FirstName is required!"),
       lastName: Yup.string().required("LastName is required!"),
@@ -29,13 +36,12 @@ const ContactForm = (props: Props) => {
       formik.resetForm();
     },
   });
+
+  
   return (
     <div id="contact us" className="w-full flex items-center justify-center">
       <section className="relative bg-white" aria-labelledby="contact-heading">
         <h1 className="text-2xl lg:text-6xl font-black mb-10">Contact Us</h1>
-
-        {/* Decorative dot pattern */}
-
         <div className="mx-auto max-w-full">
           <div className="relative bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-3">
@@ -143,7 +149,9 @@ const ContactForm = (props: Props) => {
                 <h3 className="text-lg font-medium text-white">
                   Contact information
                 </h3>
+
                 <p className="mt-6 max-w-3xl text-base text-white">
+
                   Nullam risus blandit ac aliquam justo ipsum. Quam mauris
                   volutpat massa dictumst amet. Sapien tortor lacus arcu.
                 </p>
@@ -151,9 +159,11 @@ const ContactForm = (props: Props) => {
                   <dt>
                     <span className="sr-only">Phone number</span>
                   </dt>
+
                   <dd className="flex text-base text-white">
                     <PhoneIcon
                       className="h-6 w-6 flex-shrink-0 text-white"
+
                       aria-hidden="true"
                     />
                     <span className="ml-3">+1 (555) 123-4567</span>
@@ -164,6 +174,7 @@ const ContactForm = (props: Props) => {
                   <dd className="flex text-base text-white">
                     <EnvelopeIcon
                       className="h-6 w-6 flex-shrink-0 text-white"
+
                       aria-hidden="true"
                     />
                     <span className="ml-3">support@workcation.com</span>
@@ -192,11 +203,13 @@ const ContactForm = (props: Props) => {
                     </a>
                   </li>
                   <li>
+
                     <a
                       className="text-white hover:text-white"
                       href="https://twitter.com/JWTCairo"
                       target="_blanck"
                     >
+
                       <span className="sr-only">Twitter</span>
                       <svg
                         className="h-7 w-7"
