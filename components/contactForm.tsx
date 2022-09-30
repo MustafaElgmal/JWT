@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import React from "react";
-<<<<<<< HEAD
+import axios from "axios";
 import {
   Bars3Icon,
   EnvelopeIcon,
@@ -9,9 +9,6 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-=======
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
->>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
 type Props = {};
 
 const ContactForm = (props: Props) => {
@@ -20,43 +17,31 @@ const ContactForm = (props: Props) => {
       firstName: "",
       lastName: "",
       email: "",
-      phone: "",
+      phoneNumber: "",
       message: "",
     },
-<<<<<<< HEAD
-    onSubmit: async (values) => {},
-  });
-  return (
-    <div
-      id="contact us"
-      className="w-full flex items-center justify-center mb-10"
-    >
-      <section className="relative bg-white" aria-labelledby="contact-heading">
-        <h1 className="text-2xl lg:text-6xl font-black mb-10">Contact Us</h1>
-        <div
-          className="absolute h-1/2 w-full bg-warm-gray-50"
-          aria-hidden="true"
-        />
-=======
+
     validationSchema: Yup.object({
       firstName: Yup.string().required("FirstName is required!"),
-      LastName: Yup.string().required("LastName is required!"),
-      Email: Yup.string().required("Email is required!"),
-      Phone: Yup.string().required("Phone is required!"),
+      lastName: Yup.string().required("LastName is required!"),
+      email: Yup.string().required("Email is required!"),
+      phoneNumber: Yup.string().required("Phone is required!"),
       message: Yup.string().required("Message is required!"),
     }),
     onSubmit: async (values) => {
-      console.log(values);
+      const res = await axios.post("/api/sendgrid", values);
+      if (res.status === 200) {
+        alert("Form is submit!");
+      }
+      formik.resetForm();
     },
   });
+
+  
   return (
     <div id="contact us" className="w-full flex items-center justify-center">
       <section className="relative bg-white" aria-labelledby="contact-heading">
         <h1 className="text-2xl lg:text-6xl font-black mb-10">Contact Us</h1>
-
->>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
-        {/* Decorative dot pattern */}
-
         <div className="mx-auto max-w-full">
           <div className="relative bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-3">
@@ -164,11 +149,9 @@ const ContactForm = (props: Props) => {
                 <h3 className="text-lg font-medium text-white">
                   Contact information
                 </h3>
-<<<<<<< HEAD
-                <p className="mt-6 max-w-3xl text-base text-teal-50">
-=======
+
                 <p className="mt-6 max-w-3xl text-base text-white">
->>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
+
                   Nullam risus blandit ac aliquam justo ipsum. Quam mauris
                   volutpat massa dictumst amet. Sapien tortor lacus arcu.
                 </p>
@@ -176,15 +159,11 @@ const ContactForm = (props: Props) => {
                   <dt>
                     <span className="sr-only">Phone number</span>
                   </dt>
-<<<<<<< HEAD
-                  <dd className="flex text-base text-teal-50">
-                    <PhoneIcon
-                      className="h-6 w-6 flex-shrink-0 text-teal-200"
-=======
+
                   <dd className="flex text-base text-white">
                     <PhoneIcon
                       className="h-6 w-6 flex-shrink-0 text-white"
->>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
+
                       aria-hidden="true"
                     />
                     <span className="ml-3">+1 (555) 123-4567</span>
@@ -192,15 +171,10 @@ const ContactForm = (props: Props) => {
                   <dt>
                     <span className="sr-only">Email</span>
                   </dt>
-<<<<<<< HEAD
-                  <dd className="flex text-base text-teal-50">
-                    <EnvelopeIcon
-                      className="h-6 w-6 flex-shrink-0 text-teal-200"
-=======
                   <dd className="flex text-base text-white">
                     <EnvelopeIcon
                       className="h-6 w-6 flex-shrink-0 text-white"
->>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
+
                       aria-hidden="true"
                     />
                     <span className="ml-3">support@workcation.com</span>
@@ -229,32 +203,13 @@ const ContactForm = (props: Props) => {
                     </a>
                   </li>
                   <li>
-<<<<<<< HEAD
-                    <a className="text-teal-200 hover:text-teal-100" href="#">
-                      <span className="sr-only">GitHub</span>
-                      <svg
-                        className="h-7 w-7"
-                        aria-hidden="true"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-teal-200 hover:text-teal-100" href="#">
-=======
+
                     <a
                       className="text-white hover:text-white"
                       href="https://twitter.com/JWTCairo"
                       target="_blanck"
                     >
->>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
+
                       <span className="sr-only">Twitter</span>
                       <svg
                         className="h-7 w-7"
@@ -274,26 +229,23 @@ const ContactForm = (props: Props) => {
                 <h3 className="text-lg font-medium text-warm-gray-900">
                   Send us a message
                 </h3>
-                <form
-                  action="#"
-                  method="POST"
-                  className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-                >
+                <form className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                   <div>
                     <label
-                      htmlFor="first-name"
+                      htmlFor="firstName"
                       className="block text-sm font-medium text-warm-gray-900"
                     >
                       First name
                     </label>
                     <div className="mt-1">
                       <input
+                        required
                         type="text"
-                        name="first-name"
+                        name="firstName"
                         value={formik.values.firstName}
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-                        id="first-name"
+                        id="firstName"
                         autoComplete="given-name"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
@@ -301,19 +253,20 @@ const ContactForm = (props: Props) => {
                   </div>
                   <div>
                     <label
-                      htmlFor="last-name"
+                      htmlFor="lastName"
                       className="block text-sm font-medium text-warm-gray-900"
                     >
                       Last name
                     </label>
                     <div className="mt-1">
                       <input
+                        required
                         type="text"
-                        name="last-name"
+                        name="lastName"
                         value={formik.values.lastName}
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-                        id="last-name"
+                        id="lastName"
                         autoComplete="family-name"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
@@ -328,6 +281,7 @@ const ContactForm = (props: Props) => {
                     </label>
                     <div className="mt-1">
                       <input
+                        required
                         id="email"
                         name="email"
                         value={formik.values.email}
@@ -342,29 +296,23 @@ const ContactForm = (props: Props) => {
                   <div>
                     <div className="flex justify-between">
                       <label
-                        htmlFor="phone"
+                        htmlFor="phoneNumber"
                         className="block text-sm font-medium text-warm-gray-900"
                       >
-                        Phone
+                        phoneNumber
                       </label>
-                      <span
-                        id="phone-optional"
-                        className="text-sm text-warm-gray-500"
-                      >
-                        Optional
-                      </span>
                     </div>
                     <div className="mt-1">
                       <input
+                        required
                         type="text"
-                        name="phone"
-                        value={formik.values.phone}
+                        name="phoneNumber"
+                        value={formik.values.phoneNumber}
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-                        id="phone"
+                        id="phoneNumber"
                         autoComplete="tel"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                        aria-describedby="phone-optional"
                       />
                     </div>
                   </div>
@@ -385,6 +333,7 @@ const ContactForm = (props: Props) => {
                     </div>
                     <div className="mt-1">
                       <textarea
+                        required
                         id="message"
                         name="message"
                         value={formik.values.message}
@@ -399,7 +348,8 @@ const ContactForm = (props: Props) => {
                   </div>
                   <div className="sm:col-span-2 sm:flex sm:justify-end">
                     <button
-                      type="submit"
+                      type="button"
+                      onClick={() => formik.handleSubmit()}
                       className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-imperial-600 focus:outline-none focus:ring-2 focus:bg-blue-600 focus:ring-offset-2 sm:w-auto"
                     >
                       Submit

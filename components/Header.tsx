@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
-import { Bars3Icon,  XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import * as Scroll from "react-scroll";
 
 const Header = () => {
   const [menu, setMenu] = useState([
-    { name: "women", active:false},
+    { name: "women", active: false },
     { name: "stories", active: false },
     { name: "internships", active: false },
     { name: "interviews", active: false },
@@ -25,7 +25,6 @@ const Header = () => {
     setMenu(filterdMenu);
   };
 
-
   return (
     <header className="fixed-top">
       <Disclosure as="nav" className="bg-white shadow">
@@ -41,7 +40,7 @@ const Header = () => {
                     <Link href="/">
                       <img
                         className="block h-8 w-auto lg:hnameden"
-                        src="https://nipsxawvnjrdqkigovgl.supabase.co/storage/v1/object/public/workout/Wunderman_Thompson_2018.png"
+                        src="https://cdn.sanity.io/images/3jgfjpmr/production/5ea170be5eee6804d9955e6dc5369c054914f6bc-300x104.png"
                         alt="Your Company"
                       />
                     </Link>
@@ -90,7 +89,6 @@ const Header = () => {
                   <Disclosure.Button
                     key={item.name}
                     className={"item block py-2 pl-3 pr-4 "}
-                    
                   >
                     <Scroll.Link
                       activeClass="active"
@@ -98,7 +96,7 @@ const Header = () => {
                       spy={true}
                       offset={-70}
                       duration={500}
-                      href='/'
+                      href="/"
                       className={`${
                         item.active
                           ? "item border-l-4 border-indigo-500 bg-indigo-50  text-base font-medium text-indigo-700"
