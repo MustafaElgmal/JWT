@@ -35,7 +35,7 @@ export default function InternShip({ internship }: AppProps) {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
         <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
