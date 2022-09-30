@@ -35,7 +35,7 @@ export default function InternShip({ internship }: AppProps) {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
         <div className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold py-6 sm:w-4/6 w-5/6 mx-auto">
