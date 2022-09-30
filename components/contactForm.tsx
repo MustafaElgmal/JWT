@@ -1,5 +1,7 @@
 import { useFormik } from "formik";
+import * as Yup from "yup";
 import React from "react";
+<<<<<<< HEAD
 import {
   Bars3Icon,
   EnvelopeIcon,
@@ -7,16 +9,21 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
+=======
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+>>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
 type Props = {};
 
 const ContactForm = (props: Props) => {
   const formik = useFormik({
     initialValues: {
-      name: "ss",
+      firstName: "",
+      lastName: "",
       email: "",
-      number: "",
+      phone: "",
       message: "",
     },
+<<<<<<< HEAD
     onSubmit: async (values) => {},
   });
   return (
@@ -30,10 +37,28 @@ const ContactForm = (props: Props) => {
           className="absolute h-1/2 w-full bg-warm-gray-50"
           aria-hidden="true"
         />
+=======
+    validationSchema: Yup.object({
+      firstName: Yup.string().required("FirstName is required!"),
+      LastName: Yup.string().required("LastName is required!"),
+      Email: Yup.string().required("Email is required!"),
+      Phone: Yup.string().required("Phone is required!"),
+      message: Yup.string().required("Message is required!"),
+    }),
+    onSubmit: async (values) => {
+      console.log(values);
+    },
+  });
+  return (
+    <div id="contact us" className="w-full flex items-center justify-center">
+      <section className="relative bg-white" aria-labelledby="contact-heading">
+        <h1 className="text-2xl lg:text-6xl font-black mb-10">Contact Us</h1>
+
+>>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
         {/* Decorative dot pattern */}
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="relative bg-white shadow-xl">
+        <div className="mx-auto max-w-full">
+          <div className="relative bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-3">
               {/* Contact information */}
               <div className="relative overflow-hidden bg-gradient-to-b from-blue-700 to-blue-600 py-10 px-6 sm:px-10 xl:p-12">
@@ -139,7 +164,11 @@ const ContactForm = (props: Props) => {
                 <h3 className="text-lg font-medium text-white">
                   Contact information
                 </h3>
+<<<<<<< HEAD
                 <p className="mt-6 max-w-3xl text-base text-teal-50">
+=======
+                <p className="mt-6 max-w-3xl text-base text-white">
+>>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
                   Nullam risus blandit ac aliquam justo ipsum. Quam mauris
                   volutpat massa dictumst amet. Sapien tortor lacus arcu.
                 </p>
@@ -147,9 +176,15 @@ const ContactForm = (props: Props) => {
                   <dt>
                     <span className="sr-only">Phone number</span>
                   </dt>
+<<<<<<< HEAD
                   <dd className="flex text-base text-teal-50">
                     <PhoneIcon
                       className="h-6 w-6 flex-shrink-0 text-teal-200"
+=======
+                  <dd className="flex text-base text-white">
+                    <PhoneIcon
+                      className="h-6 w-6 flex-shrink-0 text-white"
+>>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
                       aria-hidden="true"
                     />
                     <span className="ml-3">+1 (555) 123-4567</span>
@@ -157,9 +192,15 @@ const ContactForm = (props: Props) => {
                   <dt>
                     <span className="sr-only">Email</span>
                   </dt>
+<<<<<<< HEAD
                   <dd className="flex text-base text-teal-50">
                     <EnvelopeIcon
                       className="h-6 w-6 flex-shrink-0 text-teal-200"
+=======
+                  <dd className="flex text-base text-white">
+                    <EnvelopeIcon
+                      className="h-6 w-6 flex-shrink-0 text-white"
+>>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
                       aria-hidden="true"
                     />
                     <span className="ml-3">support@workcation.com</span>
@@ -167,7 +208,11 @@ const ContactForm = (props: Props) => {
                 </dl>
                 <ul role="list" className="mt-8 flex space-x-12">
                   <li>
-                    <a className="text-teal-200 hover:text-teal-100" href="#">
+                    <a
+                      className="text-white hover:text-white"
+                      href="https://www.facebook.com/WundermanThompson"
+                      target="_blanck"
+                    >
                       <span className="sr-only">Facebook</span>
                       <svg
                         className="h-7 w-7"
@@ -184,6 +229,7 @@ const ContactForm = (props: Props) => {
                     </a>
                   </li>
                   <li>
+<<<<<<< HEAD
                     <a className="text-teal-200 hover:text-teal-100" href="#">
                       <span className="sr-only">GitHub</span>
                       <svg
@@ -202,6 +248,13 @@ const ContactForm = (props: Props) => {
                   </li>
                   <li>
                     <a className="text-teal-200 hover:text-teal-100" href="#">
+=======
+                    <a
+                      className="text-white hover:text-white"
+                      href="https://twitter.com/JWTCairo"
+                      target="_blanck"
+                    >
+>>>>>>> 7bdc50928e42ca5b4c281d3acc2c78634d1c1e3f
                       <span className="sr-only">Twitter</span>
                       <svg
                         className="h-7 w-7"
@@ -237,6 +290,9 @@ const ContactForm = (props: Props) => {
                       <input
                         type="text"
                         name="first-name"
+                        value={formik.values.firstName}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                         id="first-name"
                         autoComplete="given-name"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
@@ -254,6 +310,9 @@ const ContactForm = (props: Props) => {
                       <input
                         type="text"
                         name="last-name"
+                        value={formik.values.lastName}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                         id="last-name"
                         autoComplete="family-name"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
@@ -271,6 +330,9 @@ const ContactForm = (props: Props) => {
                       <input
                         id="email"
                         name="email"
+                        value={formik.values.email}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                         type="email"
                         autoComplete="email"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
@@ -296,6 +358,9 @@ const ContactForm = (props: Props) => {
                       <input
                         type="text"
                         name="phone"
+                        value={formik.values.phone}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                         id="phone"
                         autoComplete="tel"
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
@@ -322,6 +387,9 @@ const ContactForm = (props: Props) => {
                       <textarea
                         id="message"
                         name="message"
+                        value={formik.values.message}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                         rows={4}
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                         aria-describedby="message-max"
@@ -332,7 +400,7 @@ const ContactForm = (props: Props) => {
                   <div className="sm:col-span-2 sm:flex sm:justify-end">
                     <button
                       type="submit"
-                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:w-auto"
+                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-imperial-600 focus:outline-none focus:ring-2 focus:bg-blue-600 focus:ring-offset-2 sm:w-auto"
                     >
                       Submit
                     </button>
