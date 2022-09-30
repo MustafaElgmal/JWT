@@ -5,16 +5,16 @@ import React from "react";
 import StoryDetails from "../../components/storyDetails";
 import { AppProps } from "../../types";
 import { getAllStories } from "../../utils/apis";
-import StoryCard  from "../../components/story";
+import StoryCard from "../../components/story";
 
 const Story = ({ story, stories }: AppProps) => {
   return (
     <div>
-      <div>
+      <div className="max-h-screen">
         <img
-          src="https://review2020.s3.us-east-1.amazonaws.com/1664444966271slack-imgs.png"
-          alt="landimg"
-          className="bg-cover bg-center w-full"
+          className="bg-cover bg-center w-full max-h-screen"
+          src="https://cdn.sanity.io/images/3jgfjpmr/production/1b84827d76862e6be51fe844d49e58fc62560783-1200x627.png?w=2000&fit=max&auto=format"
+          alt="landing"
         />
       </div>
       <StoryDetails story={story} />
