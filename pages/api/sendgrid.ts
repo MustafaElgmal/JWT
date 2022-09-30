@@ -40,7 +40,7 @@ const sendingConvermationEmail = (
   message: string,
   phone: string
 ) => {
-  sgmail.setApiKey(process.env.SENDGRID_API_KEY as string);
+  sgmail.setApiKey('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');
   const mail = {
     to: "mostafaelgmal36@gmail.com",
     from: email,
