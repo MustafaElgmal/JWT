@@ -43,7 +43,7 @@ export default function Internship({ internship }: AppProps) {
                 <h1 className="text-2xl font-extrabold  xl:leading-loose text-gray-800">
                   {internship?.title}
                 </h1>
-                <p className="text-2xl font-semibold leading-6 mt-4 text-gray-600">
+                <p className="text-2xl font-semibold leading-6 pb-6 overflow-hidden text-gray-600">
                   {internship?.description}
                 </p>
               </div>

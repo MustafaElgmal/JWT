@@ -3,6 +3,7 @@ import React from "react";
 import { AppProps } from "../types";
 import { createImageUrl } from "../utils/functions";
 import * as Scroll from "react-scroll";
+import Link from "next/link";
 
 function Opportunities({ careers }: AppProps) {
   return (
@@ -116,6 +117,13 @@ function Opportunities({ careers }: AppProps) {
           )}
         </div>
       ))}
+       <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
+          <Link href="/career">
+            <a className="lg:text-xl p-2 text-sm text-center text-gray-100 font-bold text-decoration-none hover:text-white">
+              Other vacancies
+            </a>
+          </Link>
+        </div>
     </div>
   );
 }

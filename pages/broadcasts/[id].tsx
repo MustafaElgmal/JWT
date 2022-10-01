@@ -10,13 +10,15 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
   return (
     <div>
       <div className="relative">
-        <img
-          className="bg-cover bg-center brightness-[0.35] blur-[1.5px] "
-          src="https://images.unsplash.com/photo-1583127812417-7c06e950a432?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
-        />
-        <h2 className=" absolute bottom-[50%] md:left-[30%] left-[9%] text-white text-md hidden md:md:block lg:left-[35%] ">
-          Welcome To Our Podcast
-        </h2>
+      <div className=" text-white bodcastImage h-screen">
+      <div className="bg-gradient-to-r from-blue-900 xl:px-8  xl:py-32 lg:py-20 px-2 py-16 h-screen">
+          <div className=" max-w-xl flex items-end px-8 h-full">
+            <h1 className="xl:text-6xl font-bold uppercase">bodcast</h1>
+          </div>
+        </div>
+        
+        
+      </div>
         {podcast?.audioUrl ? (
           <div className="bg-white rounded-md lg:rounded-none  drop-shadow-2xl h-[260px] w-[60%] absolute bottom-[-80%] md:bottom-[-11%] left-[18%] z-10 md:h-[110px] sm:bottom-[-30%] lg:absolute lg:bottom-[-5%] lg:max-w-[50%] lg:h-[190px] lg:left-[25%]  ">
             <div className="flex flex-wrap md:flex-row md:w-full sm:flex sm:flex-col sm:w-[100%] sm:h-[100%]">
@@ -56,7 +58,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
               <>
                 <div className="lg:col-span-5 lg:col-start-8">
                   <div className="flex justify-between">
-                    <h1 className="text-2xl font-medium text-gray-900">
+                    <h1 className="text-2xl font-bold text-gray-900">
                       {podcast?.title}
                     </h1>
                   </div>
@@ -73,13 +75,10 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
                   </div>
                 </div>
                 <div className="mt-8 lg:col-span-5">
-                  <div className="mt-3">
-                    <h2 className="text-lg font-medium text-gray-900">
-                      Description
-                    </h2>
-                    <div className="prose prose-sm mt-4 text-gray-500" />
+                  <p className="mt-2 text-xl font-semibold text-gray-900">
+                    
                     {podcast?.description}
-                  </div>
+                  </p>
                 </div>
               </>
             ) : (

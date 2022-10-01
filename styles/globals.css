@@ -51,6 +51,7 @@ a {
   html {
     color-scheme: dark;
   }
+}
 
 
 
@@ -65,9 +66,25 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-
 .background-image {
   background-image: url("https://lxwnzovjjfyhbnrqtzqh.supabase.co/storage/v1/object/public/landing/275552462_4977375532323835_1143964495443377286_n.jpg");
+  background-size: cover;
+}
+.bodcastImage{
+  background-image: url("https://cdn.sanity.io/images/3jgfjpmr/production/a83f8022c308c4a06357d3bf052ca17f47521673-6720x4480.jpg?w=2000&fit=max&auto=format");
+  background-size: cover;
+}
+.storyImage{
+  background-image: url("https://lxwnzovjjfyhbnrqtzqh.supabase.co/storage/v1/object/public/landing/273867068_4886443321438059_3821558018186676713_n.png");
+  background-size: cover;
+}
+.internShipImage{
+  background-image: url("https://lxwnzovjjfyhbnrqtzqh.supabase.co/storage/v1/object/public/landing/273578610_1890094691161964_5608811467393458695_n.png");
+  background-size: cover;
+}
+.careerImage{
+  
+  background-image: url("https://lxwnzovjjfyhbnrqtzqh.supabase.co/storage/v1/object/public/landing/273945113_5065156993547254_7326903147520244853_n.jpg");
   background-size: cover;
 }
 
