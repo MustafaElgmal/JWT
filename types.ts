@@ -96,4 +96,11 @@ export interface Internship {
   _updatedAt: string
 
 }
+export interface FormType{
+  firstName:string
+  lastName:string
+  email:string
+  phoneNumber:string
+  message:string
+}
 

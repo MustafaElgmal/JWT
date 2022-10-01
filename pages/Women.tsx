@@ -1,30 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import WomenQuotes from "../components/WomenQuotes";
-const women = [
-  {
-    id: 1,
-    name: "Mai Azzmy",
-    position: "Position",
-    quote: "Talent wins games, but teamwork and intelligence win championships",
-    imgUrl: "https://i.ibb.co/kBgtHK6/Rectangle-5.png",
-  },
-  {
-    id: 2,
-    name: "Rana Nadim",
-    position: "Position",
-    quote: "Talent wins games, but teamwork and intelligence win championships",
-    imgUrl: "https://i.ibb.co/6PR2Y74/Rectangle-15.png",
-  },
-  {
-    id: 3,
-    name: "Habiba Diab",
-    position: "Position",
-    quote: "Talent wins games, but teamwork and intelligence win championships",
-    imgUrl: "https://i.ibb.co/X8PKD3q/Rectangle-8.png",
-  },
-];
-
+import { women } from "../constants/index"
 function Women() {
   return (
     <div className="flex flex-col items-center justify-center mt-3 ">
@@ -36,7 +11,7 @@ function Women() {
       </div>
       <div className="xl:w-1/2 w-11/12 lg:my-5 my-2">
         <h1 className="xl:text-5xl font-bold text-center text-gray-800">
-          IN Touching With Our Wounder Woman
+          IN Touching With Our Wunder Woman
         </h1>
       </div>
       <div className="container mx-auto mt-5">

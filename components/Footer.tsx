@@ -1,11 +1,8 @@
-import Link from "next/link";
-import React from "react";
-
 import { SocialIcon } from "react-social-icons";
 
 const Footer = () => {
   return (
-    <footer className="div2 text-white" aria-labelledby="footer-heading">
+    <footer className="div2 text-white relative" aria-labelledby="footer-heading">
       <div className="mx-auto min-w-5x2 py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className=" w-full mt-12 grid grid-cols-2 gap-20 xl:col-span-2 xl:mt-0">
@@ -90,21 +87,25 @@ const Footer = () => {
                 style={{ height: 35, width: 35 }}
                 url="https://www.facebook.com/WundermanThompson/"
                 bgColor="white"
+                target='_blanck'
               />
               <SocialIcon
                 style={{ height: 35, width: 35 }}
-                url="https://twitter.com/Fahad_Alshemali"
+                url="https://twitter.com/JWTCairo"
                 bgColor="white"
+                target='_blanck'
               />
               <SocialIcon
                 style={{ height: 35, width: 35 }}
                 url="https://www.instagram.com/wunthompson/"
                 bgColor="white"
+                target='_blanck'
               />
               <SocialIcon
                 style={{ height: 35, width: 35 }}
                 url="https://www.linkedin.com/company/wunderman-thompson-/"
                 bgColor="white"
+                target='_blanck'
               />
             </div>
           </div>

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { AppProps } from '../types';
 import { createImageUrl } from '../utils/functions';
