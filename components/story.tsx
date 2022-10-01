@@ -8,7 +8,7 @@ const Story = ({ stories }: AppProps) => {
   return (
     <div id={"stories"} className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
       <div className="flex lg:flex-row flex-col justify-between gap-8 pt-12">
-        <div className="w-full lg:w-5/12 flex flex-col justify-center">
+        <div className="w-full lg:w-1/3 flex flex-col justify-center">
           <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">
             OUR STORY
           </h1>
@@ -22,8 +22,8 @@ const Story = ({ stories }: AppProps) => {
             observed; which is apparent from
           </p>
         </div>
-        <div className="w-full lg:w-8/12 lg:pt-8">
-          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
+        <div className="w-full lg:w-2/3 lg:pt-8">
+          <div className="grid md:grid-cols-2 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
             {stories?.map((story) => (
               <div
                 key={story._id}

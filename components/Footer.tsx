@@ -2,7 +2,7 @@ import { SocialIcon } from "react-social-icons";
 
 const Footer = () => {
   return (
-    <footer className="div2 text-white" aria-labelledby="footer-heading">
+    <footer className="div2 text-white relative" aria-labelledby="footer-heading">
       <div className="mx-auto min-w-5x2 py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className=" w-full mt-12 grid grid-cols-2 gap-20 xl:col-span-2 xl:mt-0">

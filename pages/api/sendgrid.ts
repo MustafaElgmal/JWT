@@ -17,7 +17,7 @@ export default async function handler(
       try {
         const { firstName, lastName, email, phoneNumber, message }: FormType =
           req.body;
-         sgmail.send({
+         await sgmail.send({
           to: "reviews6767@gmail.com",
           from: email,
           subject: "Contact Us",
