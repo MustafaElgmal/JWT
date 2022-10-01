@@ -16,7 +16,7 @@ import WomenSwiper from "./WomenSwiper";
 const Women = () => {
 
     return (
-        <>
+        <div id="women">
             <div className='bg-pink-200 w-full h-screen justify-center items-center xl:flex hidden'>
                 <WomenSwiper slidesPerView={3} />
             </div >
@@ -26,7 +26,7 @@ const Women = () => {
             <div className='bg-pink-200 w-screen h-screen justify-center items-center xl:hidden lg:hidden flex '>
                 <WomenSwiper slidesPerView={1} />
             </div >
-        </>
+        </div>
     )
 }
 

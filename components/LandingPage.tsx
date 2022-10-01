@@ -8,7 +8,7 @@ const LandingPage = () => {
                     <h1 className="xl:text-6xl font-bold uppercase">wunderwomen</h1>
                     <h2>Platform</h2>
                     <p className="lg:text-2xl text-lg ">
-                        Women represents 56% of Wunderman Thompson's Family, in which each single women has contributed one way or another in the success WT has achieved nowadays.
+                        Women represents 56% of Wunderman Thompson&apos;s Family, in which each single women has contributed one way or another in the success WT has achieved nowadays.
                     </p>
                 </div>
             </div>
