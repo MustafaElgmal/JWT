@@ -25,7 +25,7 @@ export default function BroadcastCards({ podcasts }: AppProps) {
                         <img
                           className="h-48 w-full object-cover"
                           src={createImageUrl(podcast.image)}
-                          alt=""
+                          alt={podcast.title}
                         />
                       </div>
                       <div className="flex flex-1 flex-col justify-between bg-white p-6">
