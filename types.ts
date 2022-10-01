@@ -14,7 +14,7 @@ export interface AppProps {
 
 
 export interface storyType {
-  
+
   _createdAt: string;
   _id: string;
   _rev: string;
@@ -28,7 +28,7 @@ export interface storyType {
       _type: string;
     };
   };
-  owner:string
+  owner: string
 
 }
 
@@ -54,6 +54,7 @@ export interface BroadcastType {
   author: string;
   videoUrl: string;
   description: string;
+  audioUrl: string
 }
 
 export interface Career {

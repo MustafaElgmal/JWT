@@ -41,6 +41,7 @@ a {
   min-height: calc(100vh - 20%);
 }
 
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

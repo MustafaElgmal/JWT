@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import React from "react";
-import { AppProps, Internship } from "../types";
-import { createImageUrl } from "../utils/functions";
+import Link from 'next/link';
+import React from 'react';
+import { AppProps, Internship } from '../types';
+import { createImageUrl } from '../utils/functions';
 
 export default function InternShip({ internship }: AppProps) {
   return (
@@ -11,6 +11,7 @@ export default function InternShip({ internship }: AppProps) {
         <div className="w-1/3 bg-white h-full" />
         <div className="w-4/6 ml-16 bg-gray-100 h-full" />
       </div>
+
       <div className="xl:px-20 px-8 py-20 2xl:mx-auto 2xl:container relative z-40">
         <h1 className="text-5xl font-bold xl:block hidden leading-tight text-gray-800">
           INTERNSHIPS
