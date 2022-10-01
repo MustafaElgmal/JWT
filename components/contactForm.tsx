@@ -3,10 +3,8 @@ import * as Yup from "yup";
 import React from "react";
 import axios from "axios";
 import {
-  Bars3Icon,
   EnvelopeIcon,
   PhoneIcon,
-  XMarkIcon,
 } from "@heroicons/react/24/outline";
 
 type Props = {};
@@ -37,7 +35,7 @@ const ContactForm = (props: Props) => {
     },
   });
 
-  
+
   return (
     <div id="contact us" className="w-full flex items-center justify-center">
       <section className="relative bg-white" aria-labelledby="contact-heading">
@@ -342,7 +340,7 @@ const ContactForm = (props: Props) => {
                         rows={4}
                         className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                         aria-describedby="message-max"
-                        defaultValue={""}
+
                       />
                     </div>
                   </div>

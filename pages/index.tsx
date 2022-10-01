@@ -3,9 +3,11 @@ import Head from "next/head";
 import BroadcastCards from "../components/BroadcastCards";
 import ContactForm from "../components/contactForm";
 import InternShip from "../components/InternShip";
+import LandingPage from "../components/LandingPage";
 import Opportunities from "../components/Opportunities";
 import Slider from "../components/slider";
 import StoryCard from "../components/story";
+import Women from "../components/Women";
 import WomenQuotes from "../components/WomenQuotes";
 
 import { AppProps, Internship } from "../types";
@@ -27,13 +29,13 @@ const Home: NextPage = ({
       <Head>
         <title>JWT</title>
       </Head>
-      <Slider />
-      <WomenQuotes />
+      <LandingPage />
+      <Women/>
       <StoryCard stories={stories} />
       <InternShip internship={internship} />
       <BroadcastCards podcasts={podcasts} />
       <Opportunities careers={careers} />
-      <ContactForm />
+      <ContactForm /> 
     </div>
   );
 };

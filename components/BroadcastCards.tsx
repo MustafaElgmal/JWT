@@ -1,11 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { AppProps } from '../types';
 import { createImageUrl } from '../utils/functions';
 
 export default function BroadcastCards({ podcasts }: AppProps) {
-  
-
   return (
     <div id="interviews" className="bg-white">
       <div className="relative overflow-hidden">

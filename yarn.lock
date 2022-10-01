@@ -3903,7 +3903,7 @@
     "picocolors" "^1.0.0"
     "stable" "^0.1.8"
 
-"swiper@^8.4.2":
+"swiper@*":
   "integrity" "sha512-nMD/RHVYxJxrLqjWQX2n0B94ANwpnuUv/3PUDT8Aaf+mSteFvZGFng4ypAYq70zW4svryyV+8TRlbRZ+6cgv9A=="
   "resolved" "https://registry.npmjs.org/swiper/-/swiper-8.4.2.tgz"
   "version" "8.4.2"
