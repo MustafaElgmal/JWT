@@ -1,7 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React from "react";
-import { AppProps, Internship } from "../types";
+import { AppProps } from "../types";
 import { createImageUrl } from "../utils/functions";
 
 export default function InternShip({ internship }: AppProps) {
