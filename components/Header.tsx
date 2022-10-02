@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import * as Scroll from "react-scroll";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [menu, setMenu] = useState([
@@ -13,15 +14,26 @@ const Header = () => {
     { name: "contact us", active: false },
   ]);
 
+  const router = useRouter();
+
   const selectHandler = (name: string) => {
+    const pathName = router.asPath.split('/')[1]
+    if (pathName !== name && pathName !== '') {
+      router.push(`/#${name}`)
+    }
     const filterdMenu = menu.map((item) =>
       item.name === name
         ? { ...item, active: true }
         : { ...item, active: false }
     );
-
     setMenu(filterdMenu);
   };
+  useEffect(() => {
+    const filterdMenu = menu.map((item) => {
+      return { ...item, active: false }
+    })
+    setMenu(filterdMenu);
+  }, [router.asPath])
 
   return (
     <header className="fixed-top">
@@ -55,8 +67,8 @@ const Header = () => {
                         duration={500}
                         key={item.name}
                         className={`${!item.active
-                            ? "item inline-flex items-center border-b-4 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                            : "item inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                          ? "item inline-flex items-center border-b-4 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                          : "item inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
                           }`}
                         onClick={() => selectHandler(item.name)}
                       >
@@ -94,8 +106,8 @@ const Header = () => {
                       duration={500}
                       href="/"
                       className={`${item.active
-                          ? "item border-l-4 border-indigo-500 bg-indigo-50  text-base font-medium text-indigo-700"
-                          : "item border-l-4 border-transparent  text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                        ? "item border-l-4 border-indigo-500 bg-indigo-50  text-base font-medium text-indigo-700"
+                        : "item border-l-4 border-transparent  text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
                         }`}
                       onClick={() => selectHandler(item.name)}
                     >

@@ -13,7 +13,6 @@ import { AppProps, internship } from "../types";
 import {
   getAllInternShip,
   getFourStories,
-  getInternShip,
   getThreeRecFromPodcasts,
 } from "../utils/apis";
 import { getCareerUsingPagination } from "../utils/apis";
@@ -35,7 +34,7 @@ const Home: NextPage = ({
       </Head>
       <LandingPage />
       <Women />
-      <div className="container">
+      <div className=" container sm:p-0">
         <StoryCard stories={stories} />
         <Internship internships={internships} />
         <BroadcastCards podcasts={podcasts} />

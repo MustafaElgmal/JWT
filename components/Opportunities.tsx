@@ -29,7 +29,7 @@ function Opportunities({ careers }: AppProps) {
                           spy={true}
                           offset={-60}
                           duration={500}
-                          className="text-xl lg:text-2xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
+                          className="text-xl lg:text-xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
                         >
                           Come join us!
                         </Scroll.Link>
@@ -79,7 +79,7 @@ function Opportunities({ careers }: AppProps) {
                           spy={true}
                           offset={-60}
                           duration={500}
-                          className="text-xl lg:text-2xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
+                          className="text-xl lg:text-xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
                         >
                           Come join us!
                         </Scroll.Link>
