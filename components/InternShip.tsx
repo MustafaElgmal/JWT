@@ -11,7 +11,6 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import { AppProps } from "../types";
 import Link from "next/link";
 export default function Internship({ internship }: AppProps) {
-
   return (
     <div id="internships">
       <div className="flex items-center justify-between h-full w-full absolute z-0">
@@ -20,9 +19,7 @@ export default function Internship({ internship }: AppProps) {
       </div>
 
       <div className="xl:px-20 px-8 py-20 2xl:mx-auto 2xl:container relative z-40">
-        <h1 className="text-5xl font-bold xl:block hidden leading-tight text-gray-800">
-          Internships
-        </h1>
+        <h1 className=" uppercase ">Internships</h1>
         <div className="flex">
           <div className="mt-14 md:flex">
             <div className="relative lg:w-1/2 sm:w-96 xl:h-96 h-80">
@@ -47,7 +44,7 @@ export default function Internship({ internship }: AppProps) {
                   {internship?.description}
                 </p>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
 

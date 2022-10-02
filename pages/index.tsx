@@ -8,7 +8,6 @@ import Opportunities from "../components/Opportunities";
 import StoryCard from "../components/story";
 import Women from "../components/Women";
 
-
 import { AppProps, Internship } from "../types";
 import {
   getFourStories,
@@ -29,12 +28,14 @@ const Home: NextPage = ({
         <title>JWT</title>
       </Head>
       <LandingPage />
-      <Women/>
-      <StoryCard stories={stories} />
-      <InternShip internship={internship} />
-      <BroadcastCards podcasts={podcasts} />
-      <Opportunities careers={careers} />
-      <ContactForm /> 
+      <Women />
+      <div className="container">
+        <StoryCard stories={stories} />
+        <InternShip internship={internship} />
+        <BroadcastCards podcasts={podcasts} />
+        <Opportunities careers={careers} />
+        <ContactForm />
+      </div>
     </div>
   );
 };
