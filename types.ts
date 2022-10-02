@@ -64,7 +64,7 @@ export interface Career {
   _type: string
   _updatedAt: string
   description: string
-  "image": {
+  image: {
     _type: string;
     asset: {
       _ref: string;
