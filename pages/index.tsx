@@ -9,7 +9,7 @@ import Opportunities from "../components/Opportunities";
 import StoryCard from "../components/story";
 import Women from "../components/Women";
 
-import { AppProps, internship } from "../types";
+import { AppProps } from "../types";
 import {
   getAllInternShip,
   getFourStories,
