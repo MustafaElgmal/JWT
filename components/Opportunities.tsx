@@ -7,22 +7,20 @@ import Link from "next/link";
 
 function Opportunities({ careers }: AppProps) {
   return (
-    <div id="opportunities" className="md:mx-auto md:container pt-4">
-      <h1 className="text-2xl lg:text-6xl font-black">Careers</h1>
+    <div id="career" className="md:mx-auto md:container pt-4">
+      <h1 className="uppercase ">Careers</h1>
       {careers?.map((career, index) => (
         <div key={index}>
           {index % 2 === 0 ? (
-            <div className="pt-10 md:pt-10">
+            <div className="pt-10 md:pt-0">
               <div className="container mx-auto">
                 <div className="flex flex-wrap items-center pb-12">
                   <div className="md:w-1/2 lg:w-2/3 w-full xl:pr-20 md:pr-6">
-                    <h1 className="text-xl lg:text-4xl  font-bold">
-                      {career.title}
-                    </h1>
+                    <h2 className=" lg:text-3xl ">{career.title}</h2>
                     <div className="py-2 text-color">
-                      <h2 className="text-lg lg:text-3xl  py-4 md:py-8">
+                      <p className="text-lg  py-4 md:py-8">
                         {career.description}
-                      </h2>
+                      </p>
                       <div className="flex items-center cursor-pointer pb-4 md:pb-0">
                         <Scroll.Link
                           activeClass="active"
@@ -31,7 +29,7 @@ function Opportunities({ careers }: AppProps) {
                           spy={true}
                           offset={-60}
                           duration={500}
-                          className="text-xl lg:text-3xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
+                          className="text-xl lg:text-2xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
                         >
                           Come join us!
                         </Scroll.Link>
@@ -68,13 +66,11 @@ function Opportunities({ careers }: AppProps) {
               <div className="container mx-auto">
                 <div className="flex flex-wrap flex-row-reverse items-center">
                   <div className="md:w-1/2 lg:w-2/3 w-full lg:pl-20 md:pl-10 sm:pl-0 pl-0">
-                    <h1 className="text-2xl lg:text-4xl  font-black">
-                      {career.title}
-                    </h1>
+                    <h2 className=" lg:text-3xl">{career.title}</h2>
                     <div className="py-2 text-color">
-                      <h2 className="text-lg lg:text-3xl  py-4 md:py-8">
+                      <p className="text-lg  py-4 md:py-8">
                         {career.description}
-                      </h2>
+                      </p>
                       <div className="flex items-center cursor-pointer pb-4 md:pb-0">
                         <Scroll.Link
                           activeClass="active"
@@ -83,7 +79,7 @@ function Opportunities({ careers }: AppProps) {
                           spy={true}
                           offset={-60}
                           duration={500}
-                          className="text-xl lg:text-3xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
+                          className="text-xl lg:text-2xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
                         >
                           Come join us!
                         </Scroll.Link>
@@ -117,13 +113,13 @@ function Opportunities({ careers }: AppProps) {
           )}
         </div>
       ))}
-       <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
-          <Link href="/career">
-            <a className="lg:text-xl p-2 text-sm text-center text-gray-100 font-bold text-decoration-none hover:text-white">
-              Other vacancies
-            </a>
-          </Link>
-        </div>
+      <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
+        <Link href="/career">
+          <a className="lg:text-xl p-2 text-sm text-center text-gray-100 font-bold text-decoration-none hover:text-white">
+            Other vacancies
+          </a>
+        </Link>
+      </div>
     </div>
   );
 }

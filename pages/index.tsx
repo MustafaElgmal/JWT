@@ -1,15 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useEffect } from "react";
 import BroadcastCards from "../components/BroadcastCards";
 import ContactForm from "../components/contactForm";
-import InternShip from "../components/InternShips";
+import Internship from "../components/Internship";
 import LandingPage from "../components/LandingPage";
 import Opportunities from "../components/Opportunities";
 import StoryCard from "../components/story";
 import Women from "../components/Women";
 
-
-import { AppProps, Internship } from "../types";
+import { AppProps, internship } from "../types";
 import {
   getAllInternShip,
   getFourStories,
@@ -24,18 +24,24 @@ const Home: NextPage = ({
   careers,
   internships,
 }: AppProps) => {
+  useEffect(()=>{
+    
+
+  },[])
   return (
     <div>
       <Head>
         <title>JWT</title>
       </Head>
       <LandingPage />
-      <Women/>
-      <StoryCard stories={stories} />
-      <InternShip internships={internships} />
-      <BroadcastCards podcasts={podcasts} />
-      <Opportunities careers={careers} />
-      <ContactForm /> 
+      <Women />
+      <div className="container">
+        <StoryCard stories={stories} />
+        <Internship internships={internships} />
+        <BroadcastCards podcasts={podcasts} />
+        <Opportunities careers={careers} />
+        <ContactForm />
+      </div>
     </div>
   );
 };

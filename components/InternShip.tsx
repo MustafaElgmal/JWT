@@ -1,15 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { AppProps } from "../types";
-import Link from "next/link";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,8 +12,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper";
-export default function Internships({ internships }: AppProps) {
-// const ayhaga = internships[0].description.split()
+export default function Internship({ internships }: AppProps) {
   return (
     <div id="internships">
       <div className="flex items-center justify-between h-full w-full absolute z-0">
@@ -66,13 +57,6 @@ export default function Internships({ internships }: AppProps) {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
-          <Link href="/internShips">
-            <a className="lg:text-xl p-2 text-sm text-center text-gray-100 font-bold text-decoration-none hover:text-white">
-              See Our Internships
-            </a>
-          </Link>
-        </div> */}
       </div>
     </div>
   );

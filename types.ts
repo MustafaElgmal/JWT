@@ -8,8 +8,8 @@ export interface AppProps {
   podcast?: BroadcastType
   story?: storyType;
   careers?: Career[],
-  internships?: Internship[]
-  internship?: Internship
+  internships?: internship[]
+  internship?: internship
 }
 
 
@@ -79,7 +79,7 @@ export interface Career {
 
 
 
-export interface Internship {
+export interface internship {
   _id: string,
   image: {
     _type: string;
