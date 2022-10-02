@@ -7,10 +7,10 @@ import * as Scroll from "react-scroll";
 const Header = () => {
   const [menu, setMenu] = useState([
     { name: "women", active: false },
-    { name: "stories", active: false },
-    { name: "internships", active: false },
-    { name: "interviews", active: false },
-    { name: "opportunities", active: false },
+    { name: "story", active: false },
+    { name: "internship", active: false },
+    { name: "podcast", active: false },
+    { name: "career", active: false },
     { name: "contact us", active: false },
   ]);
 
@@ -45,7 +45,7 @@ const Header = () => {
                     </Link>
                   </div>
 
-                  <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+                  <div className="hidden lg:ml-6 lg:flex sm:space-x-8">
                     {menu.map((item) => (
                       <Scroll.Link
                         activeClass="active"
@@ -55,11 +55,10 @@ const Header = () => {
                         offset={-60}
                         duration={500}
                         key={item.name}
-                        className={`${
-                          !item.active
+                        className={`${!item.active
                             ? "item inline-flex items-center border-b-4 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                             : "item inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-                        }`}
+                          }`}
                         onClick={() => selectHandler(item.name)}
                       >
                         {item.name}
@@ -68,7 +67,7 @@ const Header = () => {
                   </div>
                 </div>
 
-                <div className="-mr-2 flex items-center sm:hidden md:hidden">
+                <div className="-mr-2 flex items-center  lg:hidden">
                   {/* Mobile menu button */}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Open main menu</span>
@@ -96,11 +95,10 @@ const Header = () => {
                       offset={-70}
                       duration={500}
                       href="/"
-                      className={`${
-                        item.active
+                      className={`${item.active
                           ? "item border-l-4 border-indigo-500 bg-indigo-50  text-base font-medium text-indigo-700"
                           : "item border-l-4 border-transparent  text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-                      }`}
+                        }`}
                       onClick={() => selectHandler(item.name)}
                     >
                       {item.name}
