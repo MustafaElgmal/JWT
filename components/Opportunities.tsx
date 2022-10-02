@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function Opportunities({ careers }: AppProps) {
   return (
-    <div id="opportunities" className="md:mx-auto md:container pt-4">
+    <div id="career" className="md:mx-auto md:container pt-4">
       <h1 className="text-2xl lg:text-6xl font-black">Careers</h1>
       {careers?.map((career, index) => (
         <div key={index}>

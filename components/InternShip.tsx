@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function Internship({ internship }: AppProps) {
 
   return (
-    <div id="internships">
+    <div id="internship">
       <div className="flex items-center justify-between h-full w-full absolute z-0">
         <div className="w-1/3 bg-white h-full" />
         <div className="w-4/6 ml-16 bg-gray-100 h-full" />
@@ -52,7 +52,7 @@ export default function Internship({ internship }: AppProps) {
         </div>
 
         <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
-          <Link href="/internShips">
+          <Link href="/internship">
             <a className="lg:text-xl p-2 text-sm text-center text-gray-100 font-bold text-decoration-none hover:text-white">
               See Our Internships
             </a>
