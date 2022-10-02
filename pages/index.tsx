@@ -44,6 +44,7 @@ const Home: NextPage = ({
     </div>
   );
 };
+
 export default Home;
 
 export const getStaticProps = async () => {
