@@ -1,7 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { AppProps } from "../types";
+import Link from "next/link";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,13 +23,8 @@ import { Navigation } from "swiper";
 export default function Internship({ internships }: AppProps) {
   return (
     <div id="internships">
-      <div className="flex items-center justify-between h-full w-full absolute z-0">
-        <div className="w-1/3 bg-white h-full" />
-        <div className="w-4/6 ml-16 bg-gray-100 h-full" />
-      </div>
-
       <div className="xl:px-20 px-8 py-20 2xl:mx-auto 2xl:container relative z-40">
-        <h1 className="text-5xl font-bold xl:block hidden leading-tight text-gray-800">
+        <h1 className="uppercase">
           Internships
         </h1>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
