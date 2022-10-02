@@ -8,7 +8,7 @@ import { createImageUrl } from '../../utils/functions';
 
 export default function Broadcast({ podcast, podcasts }: AppProps) {
   return (
-    <div>
+    <div className='podcast'>
       <div className="relative">
       <div className=" text-white bodcastImage h-screen">
       <div className="bg-gradient-to-r from-blue-900 xl:px-8  xl:py-32 lg:py-20 px-2 py-16 h-screen">
