@@ -14,8 +14,8 @@ const Header = () => {
     { name: "contact us", active: false },
   ]);
 
-  const router = useRouter();
 
+  const router = useRouter();
   const selectHandler = (name: string) => {
     const pathName = router.asPath.split('/')[1]
     if (pathName !== name && pathName !== '') {
