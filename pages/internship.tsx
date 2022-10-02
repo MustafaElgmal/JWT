@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetStaticProps } from "next";
-import Link from "next/link";
 import React from "react";
-import { AppProps, internship } from "../types";
+import { AppProps} from "../types";
 import { getAllInternShip } from "../utils/apis";
 import { createImageUrl } from "../utils/functions";
 
