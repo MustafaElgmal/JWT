@@ -7,6 +7,7 @@ import * as Scroll from "react-scroll";
 import { useRouter } from "next/router";
 
 const Header = () => {
+  const [selected,setSelected]=useState()
   const router=useRouter()
   const [menu, setMenu] = useState([
     { name: "women", active: false },
@@ -18,6 +19,10 @@ const Header = () => {
   ]);
 
   const selectHandler = (name: string) => {
+    const pathName=router.asPath.split('/')[1]
+    if(pathName!==name && pathName!==''){
+      router.push(`/#${name}`)
+    }
     const filterdMenu = menu.map((item) =>
       item.name === name
         ? { ...item, active: true }
@@ -28,7 +33,11 @@ const Header = () => {
   };
 
   useEffect(()=>{
-    selectHandler("")
+    const filterdMenu=menu.map((item)=>{
+      return {...item,active:false}
+    })
+    setMenu(filterdMenu);
+    
 
   },[router.asPath])
 

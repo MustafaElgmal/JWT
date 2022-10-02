@@ -16,7 +16,7 @@ export default function BroadcastCards({ podcasts }: AppProps) {
               </div>
               <div className="mx-auto mt-12 grid max-w-md gap-8 px-4 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:px-8">
                 {podcasts?.map((podcast) => (
-                  <Link key={podcast._id} href={`/broadcasts/${podcast._id}`}>
+                  <Link key={podcast._id} href={`/podcast/${podcast._id}`}>
                     <div
                       style={{ cursor: 'pointer' }}
                       className="flex flex-col overflow-hidden rounded-lg shadow-lg"

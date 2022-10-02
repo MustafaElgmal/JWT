@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useEffect } from "react";
 import BroadcastCards from "../components/BroadcastCards";
 import ContactForm from "../components/contactForm";
 import InternShip from "../components/InternShip";
@@ -23,6 +24,10 @@ const Home: NextPage = ({
   careers,
   internship,
 }: AppProps) => {
+  useEffect(()=>{
+    
+
+  },[])
   return (
     <div>
       <Head>
