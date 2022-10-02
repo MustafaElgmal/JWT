@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -80,6 +81,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
+
             <Disclosure.Panel className="lg:hidden">
               <div className="space-y-1 pt-2 pb-3">
                 {menu.map((item) => (
