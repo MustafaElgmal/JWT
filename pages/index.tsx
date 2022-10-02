@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import BroadcastCards from "../components/BroadcastCards";
 import ContactForm from "../components/contactForm";
-import InternShip from "../components/InternShip";
+import InternShip from "../components/InternShips";
 import LandingPage from "../components/LandingPage";
 import Opportunities from "../components/Opportunities";
 import StoryCard from "../components/story";
@@ -11,6 +11,7 @@ import Women from "../components/Women";
 
 import { AppProps, Internship } from "../types";
 import {
+  getAllInternShip,
   getFourStories,
   getInternShip,
   getThreeRecFromPodcasts,
@@ -21,7 +22,7 @@ const Home: NextPage = ({
   podcasts,
   stories,
   careers,
-  internship,
+  internships,
 }: AppProps) => {
   return (
     <div>
@@ -31,7 +32,7 @@ const Home: NextPage = ({
       <LandingPage />
       <Women/>
       <StoryCard stories={stories} />
-      <InternShip internship={internship} />
+      <InternShip internships={internships} />
       <BroadcastCards podcasts={podcasts} />
       <Opportunities careers={careers} />
       <ContactForm /> 
@@ -44,9 +45,9 @@ export const getStaticProps = async () => {
   const podcasts = await getThreeRecFromPodcasts();
   const stories = await getFourStories();
   const careers = await getCareerUsingPagination();
-  const internship = await getInternShip();
+  const internships = await getAllInternShip();
   return {
-    props: { podcasts, stories, careers, internship },
+    props: { podcasts, stories, careers, internships },
     revalidate: 172800,
   };
 };

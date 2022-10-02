@@ -6,7 +6,6 @@ import * as Scroll from "react-scroll";
 
 const Header = () => {
   const [menu, setMenu] = useState([
-    { name: "women", active: false },
     { name: "story", active: false },
     { name: "internship", active: false },
     { name: "podcast", active: false },
