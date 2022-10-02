@@ -80,8 +80,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-
-            <Disclosure.Panel className="sm:hidden md:hidden">
+            <Disclosure.Panel className="lg:hidden">
               <div className="space-y-1 pt-2 pb-3">
                 {menu.map((item) => (
                   <Disclosure.Button
