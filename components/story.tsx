@@ -9,10 +9,10 @@ const Story = ({ stories }: AppProps) => {
     <div id={"stories"} className="2xl:container 2xl:mx-auto lg:py-0 lg:px-20 md:py-10 md:px-6 py-9 px-4">
       <div className="flex lg:flex-row flex-col justify-between gap-8 pt-12">
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
-          <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">
+          <h2 className="leading-9 text-gray-800 pb-4">
             OUR STORY
-          </h1>
-          <p className="font-bold text-lg leading-6 text-gray-600 ">
+          </h2>
+          <p className=" leading-9 text-gray-600 ">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum.In the first place we have granted to God, and

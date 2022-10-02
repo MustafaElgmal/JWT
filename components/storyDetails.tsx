@@ -14,9 +14,7 @@ export default function StoryDetails({ story }: AppProps) {
       </div>
       <div className="xl:px-20 px-8 py-20 2xl:mx-auto 2xl:container relative z-40">
         <h1 className="text-5xl font-bold xl:block hidden leading-tight text-gray-800">
-          What our members are
-          <br />
-          saying
+          Our members stories
         </h1>
         <div>
           <div className="flex">
@@ -31,7 +29,7 @@ export default function StoryDetails({ story }: AppProps) {
               <div className="md:w-1/3 lg:w-1/3 xl:ml-32 md:ml-20 md:mt-0 mt-4 flex flex-col justify-between">
                 <div>
                   <h1 className="text-2xl font-extrabold xl:leading-loose text-gray-800">
-                    Some of the best work that was done!
+                    Inspiration story
                   </h1>
                   <p className="text-xl font-semibold leading-6 mt-4 text-gray-700">
                     {story?.story}
