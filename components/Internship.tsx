@@ -29,7 +29,7 @@ export default function Internship({ internships }: AppProps) {
         </h1>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
           {internships?.map((internship) => (
-            <SwiperSlide>
+            <SwiperSlide key={internship._id}>
               <div className="flex">
                 <div className="mt-14 md:flex">
                   <div className="relative lg:w-1/2 sm:w-96 xl:h-96 h-80">
