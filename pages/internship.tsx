@@ -2,7 +2,7 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import React from "react";
-import { AppProps, Internship } from "../types";
+import { AppProps, internship } from "../types";
 import { getAllInternShip } from "../utils/apis";
 import { createImageUrl } from "../utils/functions";
 
