@@ -1,6 +1,5 @@
 
-import { formValidation } from "./validation";
-import { FormType, Internship } from "../types";
+import { internship } from "../types";
 
 
 import { Career } from "../types";
@@ -79,7 +78,7 @@ export async function getInternShip() {
 }
 
 export async function getAllInternShip() {
-  let internships: Internship[] = [];
+  let internships: internship[] = [];
   try {
     internships = await sanityClient.fetch(`*[_type=="internship"]`);
   } catch (e) {
