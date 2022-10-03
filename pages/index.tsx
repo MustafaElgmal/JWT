@@ -23,10 +23,10 @@ const Home: NextPage = ({
   careers,
   internships,
 }: AppProps) => {
-  useEffect(()=>{
-    
+  useEffect(() => {
 
-  },[])
+
+  }, [])
   return (
     <div>
       <Head>
@@ -34,12 +34,11 @@ const Home: NextPage = ({
       </Head>
       <LandingPage />
       <Women />
-      <div className=" container sm:p-0">
+      <div className="mx-8">
         <StoryCard stories={stories} />
         <Internship internships={internships} />
         <BroadcastCards podcasts={podcasts} />
         <Opportunities careers={careers} />
-        
       </div>
       <ContactForm />
     </div>

@@ -1,16 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { AppProps } from "../types";
-import Link from "next/link";
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -22,8 +13,8 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 export default function Internship({ internships }: AppProps) {
   return (
-    <div id="internships">
-      <div className="xl:px-20 px-8 py-20 2xl:mx-auto 2xl:container relative z-40">
+    <div id="internships" className='xs:pt-4 lg:pt-0'>
+      <div className=" relative z-40">
         <h1 className="uppercase">
           Internships
         </h1>
@@ -38,7 +29,7 @@ export default function Internship({ internships }: AppProps) {
                       alt="image of profile"
                       className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded"
                     />
-                    <div className="w-32 md:flex hidden items-center justify-center absolute top-0 -mr-16 -mt-14 right-0 h-32 bg-indigo-100 rounded-full">
+                    <div className=" md:flex  items-center justify-center absolute top-0 -mr-16 -mt-14 right-0">
                       <img
                         src="https://tuk-cdn.s3.amazonaws.com/can-uploader/testimonial-svg1.svg"
                         alt="commas"
