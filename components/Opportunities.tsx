@@ -4,11 +4,14 @@ import { AppProps } from "../types";
 import { createImageUrl } from "../utils/functions";
 import * as Scroll from "react-scroll";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Opportunities({ careers }: AppProps) {
+  const router = useRouter();
   return (
     <div id="career" className="md:mx-auto md:container pt-4">
-      <h1 className="uppercase ">Careers</h1>
+      {router.asPath === "/" ? <h1 className="uppercase ">Careers</h1> : null}
+
       {careers?.map((career, index) => (
         <div key={index}>
           {index % 2 === 0 ? (
