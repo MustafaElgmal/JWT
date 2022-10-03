@@ -1,14 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
+import { Router, useRouter } from 'next/router';
 
 import { AppProps } from '../types';
 import { createImageUrl } from '../utils/functions';
 
 export default function BroadcastCards({ podcasts }: AppProps) {
+  const router=useRouter()
   return (
     <div id="podcast" className=" xs:pt-4 ">
       <div className="relative overflow-hidden">
-        <h1 className=" uppercase ">podcast</h1>
+        {router.asPath==='/'?<h1 className=" uppercase ">podcast</h1>:null}
         <div className="md:py-10">
           <div className="relative">
             <div className="max-w-full grid gap-6 lg:grid-cols-3 md:grid-cols-2">

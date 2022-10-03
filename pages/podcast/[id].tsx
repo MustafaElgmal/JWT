@@ -9,11 +9,11 @@ import { createImageUrl } from '../../utils/functions';
 export default function Broadcast({ podcast, podcasts }: AppProps) {
   return (
     <div>
-      <div className="">
-        <div className=" text-white bodcastImage h-screen">
-          <div className="bg-gradient-to-r from-blue-900 xl:px-8  xl:py-32 lg:py-20 px-2 py-16 h-screen">
+      <div>
+        <div className=" text-white bodcastImage lg:h-screen xs:h-96">
+          <div className="bg-gradient-to-r from-blue-900 xl:px-8  xl:py-32 lg:py-20 px-2 py-16 lg:h-screen xs:h-96">
             <div className=" max-w-xl flex items-end px-8 h-full">
-              <h1 className="xl:text-6xl font-bold uppercase">bodcast</h1>
+              <h1 className="xl:text-6xl font-bold uppercase">Podcast</h1>
             </div>
           </div>
         </div>

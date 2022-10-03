@@ -17,7 +17,7 @@ const Women = () => {
             <div className='bg-pink-200 w-screen h-screen justify-center items-center xl:hidden lg:flex hidden'>
                 <WomenSwiper slidesPerView={2} />
             </div >
-            <div className='bg-pink-200 w-screen h-screen justify-center items-center xl:hidden lg:hidden flex '>
+            <div className='bg-pink-200 w-screen h-[550px] justify-center items-center xl:hidden lg:hidden flex '>
                 <WomenSwiper slidesPerView={1} />
             </div >
         </div>

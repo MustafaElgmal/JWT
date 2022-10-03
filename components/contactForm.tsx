@@ -37,14 +37,14 @@ const ContactForm = (props: Props) => {
 
 
   return (
-    <div id="contact us" className="w-full flex items-center justify-center">
-      <section className="relative bg-white" aria-labelledby="contact-heading">
-        <h1 className="text-2xl lg:text-6xl font-black mb-10">Contact Us</h1>
+    <div id="contact us" className="w-full flex items-center justify-center mb-5 xs:pt-5">
+      <section className="relative bg-white " aria-labelledby="contact-heading">
+        <h1 className="uppercase">Contact Us</h1>
         <div className="mx-auto max-w-full">
           <div className="relative bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-3">
               {/* Contact information */}
-              <div className="relative overflow-hidden bg-gradient-to-b from-blue-700 to-blue-600 py-10 px-6 sm:px-10 xl:p-12">
+              <div className="relative overflow-hidden bg-gradient-to-b from-cyan-800 to-cyan-700 py-10 px-6 sm:px-10 xl:p-12">
                 <div
                   className="pointer-events-none absolute inset-0 sm:hidden"
                   aria-hidden="true"
@@ -223,15 +223,15 @@ const ContactForm = (props: Props) => {
               </div>
 
               {/* Contact form */}
-              <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-                <h3 className="text-lg font-medium text-warm-gray-900">
+              <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12 bg-gradient-to-b from-cyan-800 to-cyan-700 text-white">
+                <h3 className="text-lg font-medium ">
                   Send us a message
                 </h3>
                 <form className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                   <div>
                     <label
                       htmlFor="firstName"
-                      className="block text-sm font-medium text-warm-gray-900"
+                      className="block text-sm font-medium"
                     >
                       First name
                     </label>
@@ -245,14 +245,14 @@ const ContactForm = (props: Props) => {
                         onChange={formik.handleChange}
                         id="firstName"
                         autoComplete="given-name"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
                       />
                     </div>
                   </div>
                   <div>
                     <label
                       htmlFor="lastName"
-                      className="block text-sm font-medium text-warm-gray-900"
+                      className="block text-sm font-medium "
                     >
                       Last name
                     </label>
@@ -266,14 +266,14 @@ const ContactForm = (props: Props) => {
                         onChange={formik.handleChange}
                         id="lastName"
                         autoComplete="family-name"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
                       />
                     </div>
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-warm-gray-900"
+                      className="block text-sm font-medium "
                     >
                       Email
                     </label>
@@ -287,7 +287,7 @@ const ContactForm = (props: Props) => {
                         onChange={formik.handleChange}
                         type="email"
                         autoComplete="email"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
                   </div>
@@ -295,7 +295,7 @@ const ContactForm = (props: Props) => {
                     <div className="flex justify-between">
                       <label
                         htmlFor="phoneNumber"
-                        className="block text-sm font-medium text-warm-gray-900"
+                        className="block text-sm font-medium "
                       >
                         phoneNumber
                       </label>
@@ -310,7 +310,7 @@ const ContactForm = (props: Props) => {
                         onChange={formik.handleChange}
                         id="phoneNumber"
                         autoComplete="tel"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
                   </div>
@@ -318,13 +318,13 @@ const ContactForm = (props: Props) => {
                     <div className="flex justify-between">
                       <label
                         htmlFor="message"
-                        className="block text-sm font-medium text-warm-gray-900"
+                        className="block text-sm font-medium "
                       >
                         Message
                       </label>
                       <span
                         id="message-max"
-                        className="text-sm text-warm-gray-500"
+                        className="text-sm "
                       >
                         Max. 500 characters
                       </span>
@@ -338,7 +338,7 @@ const ContactForm = (props: Props) => {
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
                         rows={4}
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
                         aria-describedby="message-max"
 
                       />
@@ -348,7 +348,7 @@ const ContactForm = (props: Props) => {
                     <button
                       type="button"
                       onClick={() => formik.handleSubmit()}
-                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-imperial-600 focus:outline-none focus:ring-2 focus:bg-blue-600 focus:ring-offset-2 sm:w-auto"
+                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:bg-cyan-600 focus:ring-offset-2 sm:w-auto"
                     >
                       Submit
                     </button>
