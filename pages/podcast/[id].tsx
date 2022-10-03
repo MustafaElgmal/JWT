@@ -58,7 +58,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
               <>
                 <div className="lg:col-span-5 lg:col-start-8">
                   <div className="flex justify-between">
-                    <h1 className="text-2xl font-bold text-gray-900">
+                    <h1 className="lg:text-xl font-bold text-gray-700">
                       {podcast?.title}
                     </h1>
                   </div>

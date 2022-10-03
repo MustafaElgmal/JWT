@@ -28,10 +28,8 @@ export default function StoryDetails({ story }: AppProps) {
               </div>
               <div className="md:w-1/3 lg:w-1/3 xl:ml-32 md:ml-20 md:mt-0 mt-4 flex flex-col justify-between">
                 <div>
-                  <h1 className="text-2xl font-extrabold xl:leading-loose text-gray-800">
-                    Inspiration story
-                  </h1>
-                  <p className="text-xl font-semibold leading-6 mt-4 text-gray-700">
+                 
+                  <p className=" lg:text-xl leading-6 mt-4 text-gray-700">
                     {story?.story}
                   </p>
                 </div>
