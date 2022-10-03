@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+
 import React from "react";
 import { AppProps } from "../types";
 import { createImageUrl } from "../utils/functions";
@@ -8,6 +9,7 @@ import { useRouter } from "next/router";
 
 function Opportunities({ careers }: AppProps) {
   const router = useRouter();
+
   return (
     <div id="career" className="md:mx-auto md:container pt-4">
       {router.asPath === "/" ? <h1 className="uppercase ">Careers</h1> : null}
@@ -116,13 +118,17 @@ function Opportunities({ careers }: AppProps) {
           )}
         </div>
       ))}
-      <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
-        <Link href="/career">
-          <a className="lg:text-xl p-2 text-sm text-center text-gray-100 font-bold text-decoration-none hover:text-white">
-            Other vacancies
-          </a>
-        </Link>
-      </div>
+      {router.asPath === '/career' ? (
+        ''
+      ) : (
+        <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
+          <Link href="/career">
+            <a className="lg:text-xl p-2 text-sm text-center text-gray-100 font-bold text-decoration-none hover:text-white">
+              Other vacancies
+            </a>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
