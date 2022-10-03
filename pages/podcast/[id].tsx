@@ -13,7 +13,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
       <div className=" text-white bodcastImage h-screen">
       <div className="bg-gradient-to-r from-blue-900 xl:px-8  xl:py-32 lg:py-20 px-2 py-16 h-screen">
           <div className=" max-w-xl flex items-end px-8 h-full">
-            <h1 className="xl:text-6xl font-bold uppercase">bodcast</h1>
+            <h1 className="xl:text-6xl font-bold uppercase">Podcast</h1>
           </div>
         </div>
         
@@ -58,7 +58,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
               <>
                 <div className="lg:col-span-5 lg:col-start-8">
                   <div className="flex justify-between">
-                    <h1 className="text-2xl font-bold text-gray-900">
+                    <h1 className="lg:text-xl font-bold text-gray-700">
                       {podcast?.title}
                     </h1>
                   </div>
@@ -75,8 +75,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
                   </div>
                 </div>
                 <div className="mt-8 lg:col-span-5">
-                  <p className="mt-2 text-xl font-semibold text-gray-900">
-                    
+                  <p className="mt-2 lg:text-xltext-gray-700">
                     {podcast?.description}
                   </p>
                 </div>

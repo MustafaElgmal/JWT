@@ -86,4 +86,3 @@ export async function getAllInternShip() {
   }
   return internships;
 }
-
