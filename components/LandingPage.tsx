@@ -2,7 +2,7 @@ import React from 'react'
 
 const LandingPage = () => {
     return (
-        <div className=" text-white background-image h-screen">
+        <div className=" text-white background-image lg:h-screen xs:h-96">
             <div className="bg-gradient-to-r from-blue-900 xl:px-8  xl:py-32 lg:py-20 px-2 py-16 h-screen">
                 <div className=" max-w-xl grid grid-cols-1 gap-1 px-8">
                     <h1 className="xl:text-6xl font-bold uppercase">wunderwomen</h1>
