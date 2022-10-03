@@ -1,21 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
+import Link from 'next/link';
 
-import { AppProps } from "../types";
-import { createImageUrl } from "../utils/functions";
+import { AppProps } from '../types';
+import { createImageUrl } from '../utils/functions';
 
 export default function BroadcastCards({ podcasts }: AppProps) {
   return (
     <div id="podcast" className="bg-white">
       <div className="relative overflow-hidden">
         <h1 className=" uppercase ">podcast</h1>
-        <div className="relative bg-gray-50 md:p-8 p-0">
+        <div className="relative  md:py-20 md:mx-auto ">
           <div className="relative">
             <div className="mx-auto mt-12 grid max-w-md gap-8 md:px-4 sm:px-1 sm:max-w-lg  lg:max-w-7xl lg:grid-cols-3 lg:px-8">
               {podcasts?.map((podcast) => (
                 <Link key={podcast._id} href={`/podcast/${podcast._id}`}>
                   <div
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: 'pointer' }}
                     className="flex flex-col overflow-hidden rounded-lg shadow-lg"
                   >
                     <div className="flex-shrink-0">
@@ -30,7 +30,7 @@ export default function BroadcastCards({ podcasts }: AppProps) {
                         <p className="text-lg font-semibold text-gray-900">
                           {podcast.title}
                         </p>
-                        <p className={"text-gray-500"}>by {podcast.author}</p>
+                        <p className={'text-gray-500'}>by {podcast.author}</p>
                       </div>
                     </div>
                   </div>
