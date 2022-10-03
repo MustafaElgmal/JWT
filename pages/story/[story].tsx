@@ -16,8 +16,8 @@ const Story = ({ story, stories }: AppProps) => {
   },[story])
   return (
     <div className="mb-5">
-      <div className=" text-white storyImage h-screen">
-        <div className="bg-gradient-to-r from-blue-900 xl:px-8  xl:py-32 lg:py-20 px-2 py-16 h-screen">
+      <div className=" text-white storyImage lg:h-screen xs:h-96">
+        <div className="bg-gradient-to-r from-blue-900 xl:px-8  xl:py-32 lg:py-20 px-2 py-16 lg:h-screen xs:h-96">
           <div className=" min-w-xl flex items-end px-8 h-full">
             <h1 className="xl:text-6xl font-bold uppercase">{name}</h1>
           </div>

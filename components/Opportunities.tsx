@@ -11,7 +11,7 @@ function Opportunities({ careers }: AppProps) {
   const router = useRouter();
 
   return (
-    <div id="career" className="xs:pt-4 lg:pt-0'">
+    <div id="career" className="xs:pt-4 lg:pt-0">
       {router.asPath === "/" ? <h1 className="uppercase ">Careers</h1> : null}
 
       {careers?.map((career, index) => (
@@ -119,7 +119,7 @@ function Opportunities({ careers }: AppProps) {
         </div>
       ))}
       {router.asPath === '/career' ? (
-        ''
+        null
       ) : (
         <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
           <Link href="/career">
