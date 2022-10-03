@@ -8,41 +8,41 @@ import { createImageUrl } from '../../utils/functions';
 
 export default function Broadcast({ podcast, podcasts }: AppProps) {
   return (
-    <div className='podcast'>
-      <div className="relative">
-      <div className=" text-white bodcastImage h-screen">
-      <div className="bg-gradient-to-r from-blue-900 xl:px-8  xl:py-32 lg:py-20 px-2 py-16 h-screen">
-          <div className=" max-w-xl flex items-end px-8 h-full">
-            <h1 className="xl:text-6xl font-bold uppercase">bodcast</h1>
+    <div>
+      <div className="">
+        <div className=" text-white bodcastImage h-screen">
+          <div className="bg-gradient-to-r from-blue-900 xl:px-8  xl:py-32 lg:py-20 px-2 py-16 h-screen">
+            <div className=" max-w-xl flex items-end px-8 h-full">
+              <h1 className="xl:text-6xl font-bold uppercase">bodcast</h1>
+            </div>
           </div>
         </div>
-        
-        
-      </div>
         {podcast?.audioUrl ? (
-          <div className="bg-white rounded-md lg:rounded-none  drop-shadow-2xl h-[260px] w-[60%] absolute bottom-[-80%] md:bottom-[-11%] left-[18%] z-10 md:h-[110px] sm:bottom-[-30%] lg:absolute lg:bottom-[-5%] lg:max-w-[50%] lg:h-[190px] lg:left-[25%]  ">
-            <div className="flex flex-wrap md:flex-row md:w-full sm:flex sm:flex-col sm:w-[100%] sm:h-[100%]">
-              <div className="h-[50%] md:w-[30%] lg:h-full">
-                <img
-                  className=" h-[100%] rounded-md md:rounded-none w-full lg:w-full lg:h-full"
-                  src={createImageUrl(podcast.image)}
-                  alt={podcast.title}
-                />
-              </div>
-              <div className=" z-20 w-full h-[50%]  md:w-[70%] md:h-1/2">
-                <div className="h-1/2">
-                  <p className="text-sm text-center md:text-lg lg:text-lg ">
-                    {podcast.title}
-                  </p>
+          <div className="flex justify-center mt-10 ">
+            <div className="bg-white rounded-md lg:rounded-none drop-shadow-2xl h-[229px] w-[70%] md:h-[130px] lg:max-w-[50%] lg:h-[160px] ">
+              <div className="flex flex-wrap md:flex-row md:w-full sm:flex sm:flex-col sm:w-[100%] sm:h-[100%]">
+                <div className="h-[50%] md:w-[30%] md:h-full lg:h-full ">
+                  <img
+                    className=" h-[100%] rounded-md md:rounded-none w-full md:h-full lg:w-full lg:h-full"
+                    src={createImageUrl(podcast.image)}
+                    alt={podcast.title}
+                  />
                 </div>
-                <div className="h-1/2 ">
-                  <audio
-                    className="w-full lg:w-[70%] color-black absolute bottom-0 md:absolute md:bottom-[32%] md:left-0 lg:left-[30%]"
-                    controlsList="nodownload"
-                    controls
-                  >
-                    <source src={podcast?.audioUrl} />
-                  </audio>
+                <div className=" z-20 w-full h-[50%]  md:w-[70%] md:h-1/2 lg:h-1/2">
+                  <div className="h-full">
+                    <p className=" text-xs overflow-hidden text-center md:text-lg lg:text-lg  ">
+                      {podcast.title}
+                    </p>
+                  </div>
+                  <div className="h-full md:flex md:justify-center md:mx-auto lg:h-full  ">
+                    <audio
+                      className="w-full lg:w-[95%] color-black"
+                      controlsList="nodownload"
+                      controls
+                    >
+                      <source src={podcast?.audioUrl} />
+                    </audio>
+                  </div>
                 </div>
               </div>
             </div>
@@ -76,7 +76,6 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
                 </div>
                 <div className="mt-8 lg:col-span-5">
                   <p className="mt-2 text-xl font-semibold text-gray-900">
-                    
                     {podcast?.description}
                   </p>
                 </div>
@@ -86,7 +85,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
             )}
           </div>
         </div>
-        <div className="pt-20 md:pt-0 lg:pt-0 xl:pt-0 2xl:pt-0">
+        <div>
           <BroadcastCards podcasts={podcasts} />
         </div>
       </div>
