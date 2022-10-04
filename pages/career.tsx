@@ -18,7 +18,7 @@ const Career = ({ careers }: AppProps) => {
           </div>
         </div>
       </div>
-      <div id="career" className="xs:pt-4 lg:pt-0'">
+      <div id="career" className="xs:pt-10 lg:pt-0'">
         {careers?.map((career, index) => (
           <div key={index}>
             {index % 2 === 0 ? (

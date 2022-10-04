@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 export default function Internship({ internships }: AppProps) {
   return (
-    <div id="internship" className='xs:pt-4 lg:pt-0'>
+    <div id="internship" className='xs:pt-10'>
       <div className=" relative z-40">
         <h1 className="uppercase">
           Internships

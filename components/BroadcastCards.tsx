@@ -8,7 +8,7 @@ import { createImageUrl } from '../utils/functions';
 export default function BroadcastCards({ podcasts }: AppProps) {
   const router=useRouter()
   return (
-    <div id="podcast" className=" xs:pt-4 ">
+    <div id="podcast" className=" xs:pt-10 ">
       <div className="relative overflow-hidden">
         {router.asPath==='/'?<h1 className=" uppercase ">podcast</h1>:null}
         <div className="md:py-10">

@@ -106,7 +106,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
                         </div>
                         <div className="flex flex-1 flex-col justify-between bg-white p-6">
                           <div className="flex-1">
-                            <p className="text-lg font-semibold text-gray-900">
+                            <p className=" font-bold">
                               {podcast.title}
                             </p>
                             <p className={"text-gray-500"}>

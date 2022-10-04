@@ -11,7 +11,7 @@ function Opportunities({ careers }: AppProps) {
   const router = useRouter();
 
   return (
-    <div id="career" className="xs:pt-4 lg:pt-0">
+    <div id="career" className="xs:pt-10">
       {router.asPath === "/" ? <h1 className="uppercase ">Careers</h1> : null}
 
       {careers?.map((career, index) => (
