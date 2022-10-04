@@ -58,8 +58,8 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
             {podcast?.videoUrl ? (
               <>
                 <div className="lg:col-span-5 lg:col-start-8">
-                  <div className="flex justify-between">
-                    <h1 className="lg:text-xl font-bold text-gray-700">
+                  <div className="flex justify-between mx-5">
+                    <h1 className="lg:text-xl font-bold text-gray-900">
                       {podcast?.title}
                     </h1>
                   </div>
@@ -75,8 +75,8 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
                     ></iframe>
                   </div>
                 </div>
-                <div className="mt-8 lg:col-span-5">
-                  <p className="mt-2 text-xl font-semibold text-gray-900">
+                <div className="my-5 mx-5 lg:col-span-5">
+                  <p className="text-sm  text-gray-500">
                     {podcast?.description}
                   </p>
                 </div>
@@ -86,6 +86,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
             )}
           </div>
         </div>
+
         <div id="podcast" className="mx-8">
           <div className="relative overflow-hidden">
             <div className="md:py-10">
@@ -121,6 +122,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
