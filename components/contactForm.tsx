@@ -39,7 +39,6 @@ const ContactForm = (props: Props) => {
   return (
     <div id="contact us" className="w-full flex items-center justify-center mb-5 xs:pt-5">
       <section className="relative bg-white " aria-labelledby="contact-heading">
-        <h1 className="uppercase">Contact Us</h1>
         <div className="mx-auto max-w-full">
           <div className="relative bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-3">

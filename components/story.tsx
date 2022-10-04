@@ -6,7 +6,7 @@ import { createImageUrl } from "../utils/functions";
 
 const Story = ({ stories }: AppProps) => {
   return (
-    <div id={"story"} className='xs:pt-4 lg:pt-0'>
+    <div id={"story"} className='xs:pt-10'>
       <div className="flex lg:flex-row flex-col justify-between gap-2">
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <h2 className="leading-9 text-gray-800 pb-4">
