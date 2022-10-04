@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { GetStaticPaths, GetStaticProps } from 'next';
-import BroadcastCards from '../../components/BroadcastCards';
-import { AppProps, BroadcastType } from '../../types';
-import { getAllPodcasts } from '../../utils/apis';
-import { createImageUrl } from '../../utils/functions';
+import { GetStaticPaths, GetStaticProps } from "next";
+import Link from "next/link";
+import BroadcastCards from "../../components/BroadcastCards";
+import { AppProps, BroadcastType } from "../../types";
+import { getAllPodcasts } from "../../utils/apis";
+import { createImageUrl } from "../../utils/functions";
 
 export default function Broadcast({ podcast, podcasts }: AppProps) {
   return (
@@ -48,7 +49,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
             </div>
           </div>
         ) : (
-          ''
+          ""
         )}
       </div>
       <div className="pt-6 pb-16 sm:pb-24 bg-gray-50 mt-5">
@@ -81,12 +82,45 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
                 </div>
               </>
             ) : (
-              ''
+              ""
             )}
           </div>
         </div>
-        <div>
-          <BroadcastCards podcasts={podcasts} />
+        <div id="podcast" className="mx-8">
+          <div className="relative overflow-hidden">
+            <div className="md:py-10">
+              <div className="relative">
+                <div className="max-w-full grid gap-6 lg:grid-cols-3 md:grid-cols-2">
+                  {podcasts?.map((podcast) => (
+                    <Link key={podcast._id} href={`/podcast/${podcast._id}`}>
+                      <div
+                        style={{ cursor: "pointer" }}
+                        className="flex flex-col overflow-hidden rounded-lg shadow-md"
+                      >
+                        <div className="flex-shrink-0">
+                          <img
+                            className="h-48 w-full object-cover"
+                            src={createImageUrl(podcast.image)}
+                            alt={podcast.title}
+                          />
+                        </div>
+                        <div className="flex flex-1 flex-col justify-between bg-white p-6">
+                          <div className="flex-1">
+                            <p className="text-lg font-semibold text-gray-900">
+                              {podcast.title}
+                            </p>
+                            <p className={"text-gray-500"}>
+                              by {podcast.author}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
