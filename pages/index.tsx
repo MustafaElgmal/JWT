@@ -39,8 +39,9 @@ const Home: NextPage = ({
         <Internship internships={internships} />
         <BroadcastCards podcasts={podcasts} />
         <Opportunities careers={careers} />
-        <ContactForm />
+        
       </div>
+      <ContactForm />
       
     </div>
   );

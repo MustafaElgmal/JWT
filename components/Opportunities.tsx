@@ -12,7 +12,9 @@ function Opportunities({ careers }: AppProps) {
 
   return (
     <div id="career" className="xs:pt-10">
-      {router.asPath === "/" ? <h1 className="uppercase ">Careers</h1> : null}
+      {router.asPath === "/" || router.asPath === "/#career" ? (
+        <h1 className="uppercase ">Careers</h1>
+      ) : null}
 
       {careers?.map((career, index) => (
         <div key={index}>
@@ -27,17 +29,11 @@ function Opportunities({ careers }: AppProps) {
                         {career.description}
                       </p>
                       <div className="flex items-center cursor-pointer pb-4 md:pb-0">
-                        <Scroll.Link
-                          activeClass="active"
-                          href="/"
-                          to="contact us"
-                          spy={true}
-                          offset={-60}
-                          duration={500}
-                          className="text-xl lg:text-xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
-                        >
-                          Come join us!
-                        </Scroll.Link>
+                        <Link href="https://www.wundermanthompson.com/careers" >
+                          <a target='_blank' className="text-xl lg:text-xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none">
+                            Come join us!
+                          </a>
+                        </Link>
 
                         <div className="pl-2">
                           <svg
@@ -77,17 +73,11 @@ function Opportunities({ careers }: AppProps) {
                         {career.description}
                       </p>
                       <div className="flex items-center cursor-pointer pb-4 md:pb-0">
-                        <Scroll.Link
-                          activeClass="active"
-                          href="/"
-                          to="contact us"
-                          spy={true}
-                          offset={-60}
-                          duration={500}
-                          className="text-xl lg:text-xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
-                        >
-                          Come join us!
-                        </Scroll.Link>
+                        <Link href="https://www.wundermanthompson.com/careers" target='_blank'>
+                          <a target='_blank' className="text-xl lg:text-xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none">
+                            Come join us!
+                          </a>
+                        </Link>
                         <div className="pl-2">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -118,11 +108,9 @@ function Opportunities({ careers }: AppProps) {
           )}
         </div>
       ))}
-      {router.asPath === '/career' ? (
-        null
-      ) : (
+      {router.asPath === "/career" ? null : (
         <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
-          <Link href="/career">
+          <Link href="https://www.wundermanthompson.com/careers">
             <a className="lg:text-xl p-2 text-sm text-center text-gray-100 font-bold text-decoration-none hover:text-white">
               Other vacancies
             </a>
