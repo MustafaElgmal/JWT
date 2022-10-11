@@ -10,7 +10,7 @@ export default function BroadcastCards({ podcasts }: AppProps) {
   return (
     <div id="podcast" className=" xs:pt-10 ">
       <div className="relative overflow-hidden">
-        {router.asPath==='/'?<h1 className=" uppercase ">podcast</h1>:null}
+        {router.asPath==='/' || router.asPath==='/#podcast' ?<h1 className=" uppercase ">podcast</h1>:null}
         <div className="md:py-10">
           <div className="relative">
             <div className="max-w-full grid gap-6 lg:grid-cols-3 md:grid-cols-2">

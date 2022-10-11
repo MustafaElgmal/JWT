@@ -37,13 +37,13 @@ const ContactForm = (props: Props) => {
 
 
   return (
-    <div id="contact us" className="w-full flex items-center justify-center mb-5 xs:pt-5">
-      <section className="relative bg-white " aria-labelledby="contact-heading">
-        <div className="mx-auto max-w-full">
-          <div className="relative bg-white">
+    <div id="contact us" className="w-full flex items-center justify-center xs:pt-5 ">
+      <section className="relative grad" aria-labelledby="contact-heading">
+        <div className="mx-auto max-w-full ">
+          <div className="relative grad">
             <div className="grid grid-cols-1 lg:grid-cols-3">
               {/* Contact information */}
-              <div className="relative overflow-hidden bg-gradient-to-b from-cyan-800 to-cyan-700 py-10 px-6 sm:px-10 xl:p-12">
+              <div className="relative overflow-hidden  py-10 px-6 sm:px-10 xl:p-12">
                 <div
                   className="pointer-events-none absolute inset-0 sm:hidden"
                   aria-hidden="true"
@@ -222,7 +222,7 @@ const ContactForm = (props: Props) => {
               </div>
 
               {/* Contact form */}
-              <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12 bg-gradient-to-b from-cyan-800 to-cyan-700 text-white">
+              <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12  text-white">
                 <h3 className="text-lg font-medium ">
                   Send us a message
                 </h3>
@@ -296,7 +296,7 @@ const ContactForm = (props: Props) => {
                         htmlFor="phoneNumber"
                         className="block text-sm font-medium "
                       >
-                        phoneNumber
+                        Phone
                       </label>
                     </div>
                     <div className="mt-1">
@@ -347,7 +347,7 @@ const ContactForm = (props: Props) => {
                     <button
                       type="button"
                       onClick={() => formik.handleSubmit()}
-                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:bg-cyan-600 focus:ring-offset-2 sm:w-auto"
+                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent grad px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-200 focus:outline-none focus:ring-2 focus:bg-cyan-200 focus:ring-offset-2 sm:w-auto"
                     >
                       Submit
                     </button>

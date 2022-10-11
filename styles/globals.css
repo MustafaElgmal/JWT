@@ -77,6 +77,15 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+ .btn{
+  background-color: #00D1D9;
+ }
+.grad{
+  background:linear-gradient(90deg, #005377 0%, #00D1D9 100%);
+}
+.grad2{
+  background:linear-gradient(90deg,#00D1D9 100%, #005377 0% );
+}
 
 .sec {
   min-height: calc(100vh - 20%);
