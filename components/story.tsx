@@ -1,17 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import React from "react";
-import { AppProps } from "../types";
-import { createImageUrl } from "../utils/functions";
+import Link from 'next/link';
+import React from 'react';
+import { AppProps } from '../types';
+import { createImageUrl } from '../utils/functions';
 
 const Story = ({ stories }: AppProps) => {
   return (
-    <div id={"story"} className='xs:pt-10'>
-      <div className="flex lg:flex-row flex-col justify-between gap-2">
+    <div id={'story'} className="xs:pt-10 h-screen">
+      <div className="flex lg:flex-row flex-col justify-between gap-2 ">
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
-          <h2 className="leading-9 text-gray-800 pb-4">
-            OUR STORY
-          </h2>
+          <h2 className="leading-9 text-gray-800 pb-4">OUR STORY</h2>
           <p className=" leading-9 text-gray-600 ">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
