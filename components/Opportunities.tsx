@@ -1,19 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 
-import React from "react";
-import { AppProps } from "../types";
-import { createImageUrl } from "../utils/functions";
-import * as Scroll from "react-scroll";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import React from 'react';
+import { AppProps } from '../types';
+import { createImageUrl } from '../utils/functions';
+import * as Scroll from 'react-scroll';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 function Opportunities({ careers }: AppProps) {
   const router = useRouter();
 
   return (
-    <div id="career" className="xs:pt-10">
-      {router.asPath === "/" || router.asPath === "/#career" ? (
-        <h1 className="uppercase font-semibold" style={{ color: "#AF3B6E" }}>Careers</h1>
+    <div id="career" className="xs:pt-10 ">
+      {router.asPath === '/' || router.asPath === '/#career' ? (
+        <h1 className="uppercase font-semibold" style={{ color: '#AF3B6E' }}>
+          Careers
+        </h1>
       ) : null}
 
       {careers?.map((career, index) => (
@@ -29,8 +31,11 @@ function Opportunities({ careers }: AppProps) {
                         {career.description}
                       </p>
                       <div className="flex items-center cursor-pointer pb-4 md:pb-0">
-                        <Link href="https://www.wundermanthompson.com/careers" >
-                          <a target='_blank' className="text-xl lg:text-xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none">
+                        <Link href="https://www.wundermanthompson.com/careers">
+                          <a
+                            target="_blank"
+                            className="text-xl lg:text-xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
+                          >
                             Come join us!
                           </a>
                         </Link>
@@ -73,8 +78,14 @@ function Opportunities({ careers }: AppProps) {
                         {career.description}
                       </p>
                       <div className="flex items-center cursor-pointer pb-4 md:pb-0">
-                        <Link href="https://www.wundermanthompson.com/careers" target='_blank'>
-                          <a target='_blank' className="text-xl lg:text-xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none">
+                        <Link
+                          href="https://www.wundermanthompson.com/careers"
+                          target="_blank"
+                        >
+                          <a
+                            target="_blank"
+                            className="text-xl lg:text-xl font-semibold text-cyan-600 hover:text-orange-600 text-decoration-none"
+                          >
                             Come join us!
                           </a>
                         </Link>
@@ -108,7 +119,7 @@ function Opportunities({ careers }: AppProps) {
           )}
         </div>
       ))}
-      {router.asPath === "/career" ? null : (
+      {router.asPath === '/career' ? null : (
         <div className="text-center bg-gray-500  py-2 lg:w-64 w-48 mx-auto  mt-10">
           <Link href="https://www.wundermanthompson.com/careers">
             <a className="lg:text-xl p-2 text-sm text-center text-gray-100 font-bold text-decoration-none hover:text-white">

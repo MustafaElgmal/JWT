@@ -13,11 +13,9 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
 export default function Internship({ internships }: AppProps) {
   return (
-
-    <div id="internship" className='xs:pt-10  min-h-screen'>
-      <div className=" relative z-40  h-[750px]">
-        <h1 className="uppercase font-semibold"
-        style={{color:'#AF3B6E'}}>
+    <div id="internship" className="xs:pt-10 md:h-screen">
+      <div className=" relative z-40  ">
+        <h1 className="uppercase font-semibold" style={{ color: '#AF3B6E' }}>
           Internships
         </h1>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
