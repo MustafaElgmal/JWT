@@ -33,7 +33,7 @@ const Story = ({ stories }: AppProps) => {
                   alt="Alexa featured Img"
                 />
                 <img
-                  className="md:hidden block"
+                  className="md:hidden block "
                   src={createImageUrl(story?.image!)}
                   alt="Alexa featured Img"
                 />
