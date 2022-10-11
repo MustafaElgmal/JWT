@@ -15,7 +15,8 @@ export default function Internship({ internships }: AppProps) {
   return (
     <div id="internship" className='xs:pt-10'>
       <div className=" relative z-40">
-        <h1 className="uppercase">
+        <h1 className="uppercase font-semibold"
+        style={{color:'#AF3B6E'}}>
           Internships
         </h1>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">

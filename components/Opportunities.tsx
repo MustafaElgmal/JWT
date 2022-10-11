@@ -13,7 +13,7 @@ function Opportunities({ careers }: AppProps) {
   return (
     <div id="career" className="xs:pt-10">
       {router.asPath === "/" || router.asPath === "/#career" ? (
-        <h1 className="uppercase ">Careers</h1>
+        <h1 className="uppercase font-semibold" style={{ color: "#AF3B6E" }}>Careers</h1>
       ) : null}
 
       {careers?.map((career, index) => (
