@@ -41,7 +41,7 @@ export const getAllPodcasts = async () => {
 
 export const getThreeRecFromPodcasts = async () => {
   try {
-    const podcasts = await sanityClient.fetch(`*[_type=="podcast"][0...3]`);
+    const podcasts = await sanityClient.fetch(`*[_type=="podcast"][0...5]`);
     return podcasts;
   } catch (error) {
     console.log(error);

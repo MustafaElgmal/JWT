@@ -1,20 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import "pure-react-carousel/dist/react-carousel.es.css";
-import { AppProps } from "../types";
+import React from 'react';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import { AppProps } from '../types';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 // import required modules
-import { Navigation } from "swiper";
+import { Navigation } from 'swiper';
 export default function Internship({ internships }: AppProps) {
   return (
-    <div id="internship" className='xs:pt-10'>
-      <div className=" relative z-40">
+
+    <div id="internship" className='xs:pt-10  min-h-screen'>
+      <div className=" relative z-40  h-[750px]">
         <h1 className="uppercase font-semibold"
         style={{color:'#AF3B6E'}}>
           Internships
@@ -43,8 +44,8 @@ export default function Internship({ internships }: AppProps) {
                         {internship?.title}
                       </h1>
                       <p className=" leading-6 pb-6 text-start text-gray-600">
-                          {internship?.description}
-                        </p>
+                        {internship?.description}
+                      </p>
                     </div>
                   </div>
                 </div>
