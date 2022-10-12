@@ -18,7 +18,7 @@ export default function Internship({ internships }: AppProps) {
       <div className=" relative z-40">
         <h1 className="uppercase font-semibold"
           style={{ color: '#AF3B6E' }}>
-          Internships
+          Interns
         </h1>
         <Swiper
           spaceBetween={30}

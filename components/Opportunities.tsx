@@ -22,12 +22,12 @@ function Opportunities({ careers }: AppProps) {
                 <div className="flex flex-wrap items-center pb-12">
                   <div className="md:w-1/2 lg:w-2/3 w-full xl:pr-20 md:pr-6">
                     <h2 className=" lg:text-3xl ">{career.title}</h2>
+                    <h6 className="text-gray-500 uppercase">
+                      {career.duration} - {career.location}
+                    </h6>
                     <div className="py-2 text-color">
                       <p className="text-lg  py-4 md:py-8">
                         {career.description}
-                      </p>
-                      <p className="text-lg uppercase">
-                        {career.duration} - {career.location}
                       </p>
                       <div className="flex items-center cursor-pointer pb-4 md:pb-0">
                         <Link href="https://www.wundermanthompson.com/careers" >
@@ -68,13 +68,13 @@ function Opportunities({ careers }: AppProps) {
               <div className="container mx-auto">
                 <div className="flex flex-wrap flex-row-reverse items-center">
                   <div className="md:w-1/2 lg:w-2/3 w-full lg:pl-20 md:pl-10 sm:pl-0 pl-0">
-                    <h2 className=" lg:text-3xl">{career.title}</h2>
+                      <h2 className=" lg:text-3xl">{career.title}</h2>
+                      <h6 className="text-gray-500 uppercase">
+                        {career.duration} - {career.location}
+                      </h6>
                     <div className="py-2 text-color">
                       <p className="text-lg  py-4 md:py-8">
                         {career.description}
-                      </p>
-                      <p className="text-lg uppercase">
-                        {career.duration} - {career.location}
                       </p>
                       <div className="flex items-center cursor-pointer pb-4 md:pb-0">
                         <Link href="https://www.wundermanthompson.com/careers" target='_blank'>
