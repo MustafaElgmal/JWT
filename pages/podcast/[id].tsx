@@ -87,7 +87,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
           </div>
         </div>
 
-        <div id="podcast" className="mx-8">
+        <div id="podcasts" className="mx-8">
           <div className="relative overflow-hidden">
             <div className="md:py-10">
               <div className="relative">
