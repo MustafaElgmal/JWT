@@ -7,10 +7,10 @@ import { createImageUrl } from '../utils/functions';
 const Story = ({ stories }: AppProps) => {
   return (
     <div id={'story'} className="xs:pt-5">
-      <div className="flex lg:flex-row flex-col justify-between ">
+      <div className="flex lg:flex-row flex-col justify-between gap-5">
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <h1 className="uppercase font-semibold " style={{ color: '#AF3B6E' }}>OUR STORY</h1>
-          <p className=" leading-9 text-gray-600 ">
+          <p className="leading-9 text-gray-600 ">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum.In the first place we have granted to God, and
