@@ -3,7 +3,7 @@ import { SocialIcon } from "react-social-icons";
 const Footer = () => {
   return (
     <footer
-      className="relative overflow-hidden grad"
+      className="mt-5 relative overflow-hidden bg-gradient-to-b from-blue-700 to-blue-600"
       aria-labelledby="footer-heading"
     >
       <div
