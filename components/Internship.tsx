@@ -14,7 +14,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import { createImageUrl } from '../utils/functions';
 export default function Internship({ internships }: AppProps) {
   return (
-    <div id="interns" className='xs:pt-5 lg:min-h-screen'>
+    <div id="interns" className='xs:pt-5 xs:mt-10 lg:min-h-screen'>
       <div className=" relative z-40">
         <h1 className="uppercase font-semibold"
           style={{ color: '#AF3B6E' }}>
