@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
+import { createImageUrl } from '../utils/functions';
 export default function Internship({ internships }: AppProps) {
   return (
     <div id="internship" className='xs:pt-5 lg:min-h-screen'>
@@ -39,7 +40,7 @@ export default function Internship({ internships }: AppProps) {
                 <div className="mt-14 md:flex">
                   <div className="relative lg:w-1/2 sm:w-96 xl:h-96 h-80">
                     <img
-                      src="https://i.ibb.co/4g1D9cv/imgslider1.png"
+                      src={createImageUrl(internship.image)}
                       alt="image of profile"
                       className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded"
                     />
