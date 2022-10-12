@@ -39,7 +39,7 @@ const ContactForm = (props: Props) => {
   return (
     <div id="contact us" className="w-full flex items-center justify-center xs:pt-5 ">
       <section className="relative " aria-labelledby="contact-heading">
-        <div className="mx-auto max-w-full bg-gradient-to-r from-pink-900 to-pink-900 shadow-lg">
+        <div className="mx-auto max-w-full bg-gradient-to-r from-pink-900 to-pink-900 shadow-xl">
           <div className="relative ">
             <div className="grid grid-cols-1 lg:grid-cols-3">
               {/* Contact information */}
@@ -347,7 +347,7 @@ const ContactForm = (props: Props) => {
                     <button
                       type="button"
                       onClick={() => formik.handleSubmit()}
-                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-pink-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-pink-500 focus:ring-2 focus:bg-pink-900 focus:ring-offset-2 sm:w-auto"
+                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent  px-6 py-3 text-base font-medium  shadow-sm focus:ring-2 focus:bg-white hover:bg-white hover:text-pink-900 focus:ring-offset-2 sm:w-auto"
                     >
                       Submit
                     </button>
