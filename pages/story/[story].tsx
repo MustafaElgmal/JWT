@@ -70,8 +70,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  console.log(params)
   const stories = await getAllStories();
-  const story = stories.find((story) => story._id === params!.story);
+  const story = stories.find((story) => story._id === params?.story);
   return {
     props: { story: story, stories: stories },
   };
