@@ -10,24 +10,37 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 // import required modules
-import { Navigation } from 'swiper';
+import { Autoplay, Pagination, Navigation } from "swiper";
+import { createImageUrl } from '../utils/functions';
 export default function Internship({ internships }: AppProps) {
   return (
-
-    <div id="internship" className='xs:pt-10  min-h-screen'>
-      <div className=" relative z-40  h-[750px]">
+    <div id="internship" className='xs:pt-5 lg:min-h-screen'>
+      <div className=" relative z-40">
         <h1 className="uppercase font-semibold"
-        style={{color:'#AF3B6E'}}>
+          style={{ color: '#AF3B6E' }}>
           Internships
         </h1>
-        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 6000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
           {internships?.map((internship) => (
             <SwiperSlide key={internship._id}>
               <div className="flex">
                 <div className="mt-14 md:flex">
                   <div className="relative lg:w-1/2 sm:w-96 xl:h-96 h-80">
                     <img
-                      src="https://i.ibb.co/4g1D9cv/imgslider1.png"
+                      src={createImageUrl(internship.image)}
                       alt="image of profile"
                       className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded"
                     />

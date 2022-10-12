@@ -3,13 +3,11 @@
 import React from "react";
 import { AppProps } from "../types";
 import { createImageUrl } from "../utils/functions";
-import * as Scroll from "react-scroll";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 function Opportunities({ careers }: AppProps) {
   const router = useRouter();
-
   return (
     <div id="career" className="xs:pt-10">
       {router.asPath === "/" || router.asPath === "/#career" ? (
@@ -27,6 +25,9 @@ function Opportunities({ careers }: AppProps) {
                     <div className="py-2 text-color">
                       <p className="text-lg  py-4 md:py-8">
                         {career.description}
+                      </p>
+                      <p className="text-lg uppercase">
+                        {career.duration} - {career.location}
                       </p>
                       <div className="flex items-center cursor-pointer pb-4 md:pb-0">
                         <Link href="https://www.wundermanthompson.com/careers" >
@@ -71,6 +72,9 @@ function Opportunities({ careers }: AppProps) {
                     <div className="py-2 text-color">
                       <p className="text-lg  py-4 md:py-8">
                         {career.description}
+                      </p>
+                      <p className="text-lg uppercase">
+                        {career.duration} - {career.location}
                       </p>
                       <div className="flex items-center cursor-pointer pb-4 md:pb-0">
                         <Link href="https://www.wundermanthompson.com/careers" target='_blank'>

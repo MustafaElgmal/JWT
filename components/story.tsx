@@ -6,11 +6,10 @@ import { createImageUrl } from '../utils/functions';
 
 const Story = ({ stories }: AppProps) => {
   return (
-    <div id={'story'} className="xs:pt-10 h-screen">
-      <div className="flex lg:flex-row flex-col justify-between gap-2 ">
+    <div id={'story'} className="xs:pt-5">
+      <div className="flex lg:flex-row flex-col justify-between ">
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
-          <h2 className="leading-9 text-gray-800 pb-4">OUR STORY</h2>
-
+          <h1 className="uppercase font-semibold " style={{ color: '#AF3B6E' }}>OUR STORY</h1>
           <p className=" leading-9 text-gray-600 ">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
@@ -21,8 +20,8 @@ const Story = ({ stories }: AppProps) => {
             observed; which is apparent from
           </p>
         </div>
-        <div className="w-full lg:w-1/2 lg:pt-8">
-          <div className="grid md:grid-cols-2 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
+        <div className="w-full lg:w-1/2 lg:h-full">
+          <div className="grid sm:grid-cols-2 grid-cols-1 shadow-lg rounded-md ">
             {stories?.map((story) => (
               <div
                 key={story._id}

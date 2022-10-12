@@ -72,6 +72,8 @@ export interface Career {
     };
   }
   title: string
+  duration: string
+  location: string
 }
 
 
