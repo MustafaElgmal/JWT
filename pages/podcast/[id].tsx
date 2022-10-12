@@ -31,7 +31,7 @@ export default function Broadcast({ podcast, podcasts }: AppProps) {
                 </div>
                 <div className=" z-20 w-full h-[50%]  md:w-[70%] md:h-1/2 lg:h-1/2">
                   <div className="h-full">
-                    <p className=" text-xs overflow-hidden text-center md:text-lg lg:text-lg  ">
+                    <p className=" text-xs overflow-hidden text-center lg:text-lg md:pt-5 md:text-sm font-semibold ">
                       {podcast.title}
                     </p>
                   </div>
