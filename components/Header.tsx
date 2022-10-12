@@ -8,8 +8,8 @@ import { useRouter } from "next/router";
 const Header = () => {
   const [menu, setMenu] = useState([
     { name: "story", active: false },
-    { name: "internship", active: false },
-    { name: "podcast", active: false },
+    { name: "interns", active: false },
+    { name: "podcasts", active: false },
     { name: "career", active: false },
     { name: "contact us", active: false },
   ]);
