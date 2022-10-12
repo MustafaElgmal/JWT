@@ -38,9 +38,9 @@ const ContactForm = (props: Props) => {
 
   return (
     <div id="contact us" className="w-full flex items-center justify-center xs:pt-5 ">
-      <section className="relative grad" aria-labelledby="contact-heading">
-        <div className="mx-auto max-w-full ">
-          <div className="relative grad">
+      <section className="relative " aria-labelledby="contact-heading">
+        <div className="mx-auto max-w-full bg-gradient-to-r from-pink-900 to-pink-900 shadow-lg">
+          <div className="relative ">
             <div className="grid grid-cols-1 lg:grid-cols-3">
               {/* Contact information */}
               <div className="relative overflow-hidden  py-10 px-6 sm:px-10 xl:p-12">
@@ -244,7 +244,7 @@ const ContactForm = (props: Props) => {
                         onChange={formik.handleChange}
                         id="firstName"
                         autoComplete="given-name"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
+                        className="block w-full rounded-md border-warm-gray-300  px-4 text-black shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
                       />
                     </div>
                   </div>
@@ -265,7 +265,7 @@ const ContactForm = (props: Props) => {
                         onChange={formik.handleChange}
                         id="lastName"
                         autoComplete="family-name"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
+                        className="block w-full rounded-md border-warm-gray-300  px-4 text-black shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
                       />
                     </div>
                   </div>
@@ -286,7 +286,7 @@ const ContactForm = (props: Props) => {
                         onChange={formik.handleChange}
                         type="email"
                         autoComplete="email"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="block w-full rounded-md border-warm-gray-300  px-4 text-black shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
                   </div>
@@ -309,7 +309,7 @@ const ContactForm = (props: Props) => {
                         onChange={formik.handleChange}
                         id="phoneNumber"
                         autoComplete="tel"
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="block w-full rounded-md border-warm-gray-300  px-4 text-black shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
                   </div>
@@ -337,7 +337,7 @@ const ContactForm = (props: Props) => {
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
                         rows={4}
-                        className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
+                        className="block w-full rounded-md border-warm-gray-300  px-4 text-black shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
                         aria-describedby="message-max"
 
                       />
@@ -347,7 +347,7 @@ const ContactForm = (props: Props) => {
                     <button
                       type="button"
                       onClick={() => formik.handleSubmit()}
-                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent grad px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-200 focus:outline-none focus:ring-2 focus:bg-cyan-200 focus:ring-offset-2 sm:w-auto"
+                      className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-pink-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-pink-500 focus:ring-2 focus:bg-pink-900 focus:ring-offset-2 sm:w-auto"
                     >
                       Submit
                     </button>
