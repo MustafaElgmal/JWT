@@ -46,7 +46,7 @@ const Story = ({ story, stories }: AppProps) => {
                 <p className="font-medium text-xl leading-5 text-gray-800 mt-4">
                   {story.owner}
                 </p>
-                <Link href={`/stories/${story._id}`}>
+                <Link href={`/story/${story._id}`}>
                   <a className="font-medium text-cyan-600 hover:text-orange-600 text-decoration-none">
                     Read my story
                   </a>
